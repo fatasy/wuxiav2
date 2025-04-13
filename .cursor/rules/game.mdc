@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+Estou criando um jogo de cultivo Wuxia em 3D usando Godot 4.4 com C#. Ele mistura elementos de exploração, cultivo espiritual, agricultura, combate e evolução de personagens, ambientado em um mundo estilo Wuxia.
+
+Quero que o mundo do jogo seja vasto e vivo, com províncias, mestres, seitas e reinos ocultos. Parte do mundo é fixa e parte é gerada proceduralmente a cada nova partida, incentivando a exploração.
+
+O jogo precisa funcionar como Crusader Kings 3 (CK3) no sentido de que o mapa tem províncias clicáveis com um sistema de destaque e seleção. Cada província terá donos, conflitos e evolução própria. O jogador pode interagir com o mapa e com os NPCs diretamente nele.
+
+heightmap para gerar o relevo 3D, e uma imagem colorida onde cada cor representa uma província. Uso essa imagem para detectar cliques no mapa via shaders e raycasting, sem depender de colisores físicos.
+
+O mundo terá milhares de NPCs simultâneos com inteligência local, evoluindo mesmo quando o jogador está longe. O jogo é single-player, sem servidor online, mas precisa simular um mundo persistente e dinâmico.
+
+Preciso de ajuda para organizar bem o projeto, otimizar desempenho, estruturar a IA dos NPCs e sistemas como mapa, cultivo, relações, combates e dinâmicas de províncias — tudo de forma modular e eficiente.

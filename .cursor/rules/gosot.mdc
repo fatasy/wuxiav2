@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+Projeto: Godot 4.4 usando C# com .net 8.0
+Sempre der preferencia para escrever o codigo com return first.
+Aplicando boas praticas.

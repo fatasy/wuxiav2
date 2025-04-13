@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://xd0b1k4g586e"]
+
+[ext_resource type="Script" uid="uid://b74wba8o6oadf" path="res://Scripts/AzgaarMapGenerator.cs" id="1_4ffta"]
+[ext_resource type="Material" uid="uid://q6wmtd8stu1i" path="res://Scenes/HeightMaterial.tres" id="2_thy7m"]
+[ext_resource type="PackedScene" uid="uid://stjv7hpeuu5q" path="res://map/map.tscn" id="3_a2ucu"]
+[ext_resource type="PackedScene" uid="uid://cjlepjgwnowes" path="res://player/player.tscn" id="3_hi0he"]
+
+[sub_resource type="Environment" id="Environment_q4ib1"]
+ambient_light_color = Color(0.5, 0.5, 0.5, 1)
+fog_enabled = true
+fog_light_color = Color(0.55, 0.7, 0.8, 1)
+fog_density = 0.001
+
+[node name="AzgaarMapDemo" type="Node3D"]
+
+[node name="AzgaarMapGenerator" type="Node3D" parent="." groups=["map_generator"]]
+script = ExtResource("1_4ffta")
+JsonMapPath = "res://assets/map/cells.json"
+BaseMaterial = ExtResource("2_thy7m")
+ProvinceMeshScene = ExtResource("3_a2ucu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 10, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q4ib1")
+
+[node name="Instructions" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -50.0
+offset_right = 300.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "Modo de teste - Mesh simplificado"
+
+[node name="Player" parent="." instance=ExtResource("3_hi0he")]

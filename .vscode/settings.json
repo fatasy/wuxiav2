@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/*.uid": true,
+        "**/*.import": true
+    }
+}

@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wuxia", "Wuxia.csproj", "{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{C6E5DC0A-9ECE-47D5-A275-90885C7C2E15}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
