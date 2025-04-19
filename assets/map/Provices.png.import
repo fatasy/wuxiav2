@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkuqceumpym14"
-path="res://.godot/imported/Provices.png-f6002d58cb6d03aeebc88f23719e097f.ctex"
+uid="uid://bphsifit2w2po"
+path="res://.godot/imported/provices.png-e92f5832ef3f4c152f4c41855a4a2784.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/Provices.png"
-dest_files=["res://.godot/imported/Provices.png-f6002d58cb6d03aeebc88f23719e097f.ctex"]
+source_file="res://assets/map/provices.png"
+dest_files=["res://.godot/imported/provices.png-e92f5832ef3f4c152f4c41855a4a2784.ctex"]
 
 [params]
 
@@ -21,11 +21,11 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

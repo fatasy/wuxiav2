@@ -1,0 +1,31 @@
+[gd_resource type="ShaderMaterial" load_steps=10 format=3 uid="uid://b300c4cmtbad7"]
+
+[ext_resource type="Shader" uid="uid://8sbe30g2xav0" path="res://map/River/RiverWater.gdshader" id="1_m67c0"]
+[ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="2_jikwb"]
+[ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="3_oimcp"]
+[ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="4_n6oki"]
+[ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="5_rtwc6"]
+[ext_resource type="Texture2D" uid="uid://d38ybf4ghgv76" path="res://assets/map/rivers/river_bottom_diffuse.png" id="6_3to00"]
+[ext_resource type="Texture2D" uid="uid://b2g28ieg2ahh7" path="res://assets/map/rivers/river_bottom_gloss.png" id="7_6ww4c"]
+[ext_resource type="Texture2D" uid="uid://dc6okreon6qb3" path="res://assets/map/rivers/river_bottom_normal.png" id="8_tui61"]
+[ext_resource type="Texture2D" uid="uid://weo0l4unrawd" path="res://assets/gfx/map/water/watercolor_rgb_waterspec_a.png" id="9_ysi5h"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_m67c0")
+shader_parameter/river_bottom_diffuse = ExtResource("6_3to00")
+shader_parameter/river_bottom_normal = ExtResource("8_tui61")
+shader_parameter/river_bottom_material = ExtResource("7_6ww4c")
+shader_parameter/water_color_texture = ExtResource("9_ysi5h")
+shader_parameter/ambient_normal_texture = ExtResource("2_jikwb")
+shader_parameter/flow_normal_texture = ExtResource("3_oimcp")
+shader_parameter/foam_texture = ExtResource("5_rtwc6")
+shader_parameter/foam_noise_texture = ExtResource("4_n6oki")
+shader_parameter/flow_normal_speed = 0.075
+shader_parameter/depth = 0.15
+shader_parameter/foam_factor = 0.5
+shader_parameter/water_color_shallow = Color(0.1, 0.3, 0.13, 1)
+shader_parameter/water_color_deep = Color(0.05, 0.1, 0.02, 1)
+shader_parameter/wave1_scale = Vector2(10, 10)
+shader_parameter/wave1_speed = 0.01
+shader_parameter/wave1_rotation = -0.35

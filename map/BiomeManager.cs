@@ -78,7 +78,6 @@ public class BiomeManager
         }
 
 
-
         // Carregar dados básicos
         Godot.Collections.Array ids = data["i"].AsGodotArray();
         Godot.Collections.Array names = data["name"].AsGodotArray();

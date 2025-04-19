@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://dinofsrt4lwrl"]
+
+[ext_resource type="Shader" uid="uid://nu0rqh0px1si" path="res://Shaders/TerrainInk.gdshader" id="1_42gyt"]
+[ext_resource type="Script" uid="uid://dnhk8jbec7rh3" path="res://Shaders/TerrainInkMaterial.cs" id="1_y3cl0"]
+[ext_resource type="Texture2D" uid="uid://cqs4pcamecg2k" path="res://assets/map/normalmap.png" id="3_067uy"]
+[ext_resource type="Texture2D" uid="uid://bhsqjdoajy4r1" path="res://assets/map/terrain/colormap.png" id="3_82jlx"]
+[ext_resource type="Texture2D" uid="uid://bphsifit2w2po" path="res://assets/map/provices.png" id="5_4wcsj"]
+[ext_resource type="Texture2D" uid="uid://d4k8xjvpqmckn" path="res://assets/map/rivers.png" id="6_is05j"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_42gyt")
+shader_parameter/base_texture = ExtResource("3_82jlx")
+shader_parameter/base_normal_map = ExtResource("3_067uy")
+shader_parameter/layer_textures = null
+shader_parameter/layer_normal_maps = null
+shader_parameter/layer_masks = null
+shader_parameter/layer_properties = null
+shader_parameter/blend_sharpness = 8.0
+shader_parameter/province_map = ExtResource("5_4wcsj")
+shader_parameter/selected_province_color = Vector3(-1, -1, -1)
+shader_parameter/highlight_color = Color(1, 1, 0, 1)
+shader_parameter/rivers_map = ExtResource("6_is05j")
+shader_parameter/river_color = Color(0.2, 0.4, 0.8, 1)
+shader_parameter/river_opacity = 0.8
+script = ExtResource("1_y3cl0")

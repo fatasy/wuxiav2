@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bijipjsayc8kx"
-path="res://.godot/imported/Heightmap.png-a202ed1a0208cb1dbae8bd90bad93a15.ctex"
+uid="uid://2vl6aq3o5urc"
+path="res://.godot/imported/heightmap.png-e57df0e453d884214fcd617181c1dfee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/Heightmap.png"
-dest_files=["res://.godot/imported/Heightmap.png-a202ed1a0208cb1dbae8bd90bad93a15.ctex"]
+source_file="res://assets/map/heightmap.png"
+dest_files=["res://.godot/imported/heightmap.png-e57df0e453d884214fcd617181c1dfee.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

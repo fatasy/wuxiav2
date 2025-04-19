@@ -1,0 +1,186 @@
+[gd_resource type="ShaderMaterial" load_steps=54 format=3 uid="uid://bq6uv1mtp1i0x"]
+
+[ext_resource type="Shader" uid="uid://13eupb5v3xi7" path="res://map/Terrain/Terrain.gdshader" id="1_fv0dh"]
+[ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="2_xoeih"]
+[ext_resource type="Texture2D" uid="uid://bphsifit2w2po" path="res://assets/map/provices.png" id="2_yuk5a"]
+[ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="3_fmgtm"]
+[ext_resource type="Texture2D" uid="uid://cqs4pcamecg2k" path="res://assets/map/normalmap.png" id="3_ulu2h"]
+[ext_resource type="Texture2D" uid="uid://dwnhr8qgomahh" path="res://assets/gfx/map/water/flowmap.png" id="4_m2d5o"]
+[ext_resource type="Texture2D" uid="uid://ckah42w36dltc" path="res://assets/map/terrain/beach/beach_02_mask.png" id="4_ourjj"]
+[ext_resource type="Texture2D" uid="uid://bw08yexfk62ep" path="res://assets/map/terrain/beach/beach_02_mediterranean_diffuse.png" id="5_1qwvf"]
+[ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="5_ids4x"]
+[ext_resource type="Texture2D" uid="uid://braxbkt5ergyf" path="res://assets/gfx/map/water/foam_ramp.png" id="6_0sa1g"]
+[ext_resource type="Texture2D" uid="uid://76vfufigi4mp" path="res://assets/map/terrain/beach/beach_02_mediterranean_mask.png" id="6_6dmp8"]
+[ext_resource type="Texture2D" uid="uid://bgtacnn6ybjbk" path="res://assets/gfx/map/water/foam_map.png" id="6_ids4x"]
+[ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="7_r3efk"]
+[ext_resource type="Texture2D" uid="uid://bk418j1evk81k" path="res://assets/map/terrain/beach/beach_02_mediterranean_normal.png" id="7_yppuy"]
+[ext_resource type="Texture2D" uid="uid://d38ybf4ghgv76" path="res://assets/map/rivers/river_bottom_diffuse.png" id="8_1dj06"]
+[ext_resource type="Texture2D" uid="uid://dfd23c13wi2y6" path="res://assets/map/terrain/beach/beach_02_mediterranean_properties.png" id="8_5xa3j"]
+[ext_resource type="Texture2D" uid="uid://b2g28ieg2ahh7" path="res://assets/map/rivers/river_bottom_gloss.png" id="9_xr17l"]
+[ext_resource type="Texture2D" uid="uid://dc6okreon6qb3" path="res://assets/map/rivers/river_bottom_normal.png" id="10_nhnvl"]
+[ext_resource type="Texture2D" uid="uid://c8lrvwj5mcxtc" path="res://assets/map/terrain/beach/beach_02_pebbles_diffuse.png" id="10_tpaui"]
+[ext_resource type="Texture2D" uid="uid://d4k8xjvpqmckn" path="res://assets/map/rivers.png" id="11_7j2xk"]
+[ext_resource type="Texture2D" uid="uid://ds5fmoglrpt4b" path="res://assets/map/terrain/beach/beach_02_pebbles_mask.png" id="11_muxhi"]
+[ext_resource type="Texture2D" uid="uid://bhsqjdoajy4r1" path="res://assets/map/terrain/colormap.png" id="12_8ky2r"]
+[ext_resource type="Texture2D" uid="uid://c1m40mg40v45w" path="res://assets/gfx/map/borders/border_civil_war.png" id="12_mexa3"]
+[ext_resource type="Texture2D" uid="uid://dvppaedt6362" path="res://assets/map/terrain/beach/beach_02_pebbles_normal.png" id="12_sha56"]
+[ext_resource type="Texture2D" uid="uid://baxjhlxr3y4pj" path="res://assets/map/terrain/beach/beach_02_pebbles_properties.png" id="13_botlc"]
+[ext_resource type="Texture2D" uid="uid://weo0l4unrawd" path="res://assets/gfx/map/water/watercolor_rgb_waterspec_a.png" id="13_ionn5"]
+[ext_resource type="Texture2D" uid="uid://bq5r10inyk5g6" path="res://assets/gfx/map/borders/border_county.png" id="13_v8o3o"]
+[ext_resource type="Texture2D" uid="uid://csqhhs82dxh1k" path="res://assets/gfx/map/borders/border_domain.png" id="14_bon3p"]
+[ext_resource type="Texture2D" uid="uid://yv3rtos45jsb" path="res://assets/gfx/map/borders/border_highlighted_province.png" id="15_8dqox"]
+[ext_resource type="Texture2D" uid="uid://c5cyeslixmr3o" path="res://assets/gfx/map/borders/border_hovered_realm.png" id="16_nkvel"]
+[ext_resource type="Texture2D" uid="uid://2kxsmf4p35ge" path="res://assets/gfx/map/borders/border_hovered_realm_flat_map.png" id="17_1b17w"]
+[ext_resource type="Texture2D" uid="uid://bk2ynthvr3uqa" path="res://assets/gfx/map/borders/border_impassable.png" id="18_odrbf"]
+[ext_resource type="Texture2D" uid="uid://dlwknd0wl7d4g" path="res://assets/gfx/map/borders/border_my_realm.png" id="19_sdny5"]
+[ext_resource type="Texture2D" uid="uid://dbqwefwcqjore" path="res://assets/gfx/map/borders/border_other_realm.png" id="20_34nyc"]
+[ext_resource type="Texture2D" uid="uid://duoj5xpey2bkt" path="res://assets/gfx/map/borders/border_province.png" id="21_0euus"]
+[ext_resource type="Texture2D" uid="uid://tqrxwc3qnga2" path="res://assets/gfx/map/borders/border_realm_explorer_independent.png" id="22_lvep3"]
+[ext_resource type="Texture2D" uid="uid://byj8tuqih7lo5" path="res://assets/gfx/map/borders/border_realm_explorer_vassal.png" id="23_s6e4b"]
+[ext_resource type="Texture2D" uid="uid://cs06p2ky32woq" path="res://assets/gfx/map/borders/border_selected_realm.png" id="24_b47yu"]
+[ext_resource type="Texture2D" uid="uid://cwj43wdjp10ac" path="res://assets/gfx/map/borders/border_selected_realm_flat_map.png" id="25_osped"]
+[ext_resource type="Texture2D" uid="uid://brghbhml7hqr2" path="res://assets/gfx/map/borders/border_sub_realm.png" id="26_opga5"]
+[ext_resource type="Texture2D" uid="uid://bgaf6aqpk6ehk" path="res://assets/gfx/map/borders/border_war.png" id="27_s6mca"]
+[ext_resource type="Texture2D" uid="uid://duvvetroujgwb" path="res://assets/gfx/map/borders/border_war_ally.png" id="28_rkdeu"]
+[ext_resource type="Texture2D" uid="uid://bvm1ggvn1f1wc" path="res://assets/gfx/map/borders/border_war_target.png" id="29_6pall"]
+[ext_resource type="Texture2D" uid="uid://m7ib3nrn82vj" path="res://assets/gfx/map/borders/border_water.png" id="30_x64u8"]
+[ext_resource type="Texture2D" uid="uid://b2xhco33mdili" path="res://assets/gfx/map/borders/debug.png" id="31_lndps"]
+[ext_resource type="Texture2D" uid="uid://bdubvrbupfeb6" path="res://assets/gfx/map/borders/epidemic.png" id="32_eyrhb"]
+[ext_resource type="Texture2D" uid="uid://p5l2uptcwoy0" path="res://assets/gfx/map/borders/my_top_realm.png" id="39_wi8oj"]
+[ext_resource type="Texture2D" uid="uid://u1ol5gd6ueom" path="res://assets/gfx/map/borders/selection_highlight.png" id="45_rb4c8"]
+[ext_resource type="Texture2D" uid="uid://capfptaj32v21" path="res://assets/gfx/map/borders/selection_highlight_flat_map.png" id="46_cmdgn"]
+[ext_resource type="Texture2D" uid="uid://dvapua8lcpbn4" path="res://assets/gfx/map/borders/struggle.png" id="47_rhtbj"]
+[ext_resource type="Texture2D" uid="uid://byg15bfvicvy5" path="res://assets/gfx/map/borders/struggle_interloper.png" id="48_tdfd1"]
+[ext_resource type="Texture2D" uid="uid://cxavdqu2ds47y" path="res://assets/gfx/map/borders/struggle_involved.png" id="49_doahm"]
+[ext_resource type="Texture2D" uid="uid://cnttocby6h7fm" path="res://assets/gfx/map/borders/struggle_uninvolved.png" id="50_n5i3u"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fv0dh")
+shader_parameter/terrain_diffuse = ExtResource("12_8ky2r")
+shader_parameter/terrain_normalmap = ExtResource("3_ulu2h")
+shader_parameter/province_map = ExtResource("2_yuk5a")
+shader_parameter/selected_province_color = Vector3(-1, -1, -1)
+shader_parameter/highlight_color = Color(1, 1, 0, 1)
+shader_parameter/water_color = ExtResource("13_ionn5")
+shader_parameter/ambient_normal = ExtResource("2_xoeih")
+shader_parameter/flow_map = ExtResource("4_m2d5o")
+shader_parameter/flow_normal = ExtResource("3_fmgtm")
+shader_parameter/foam = ExtResource("7_r3efk")
+shader_parameter/foam_ramp = ExtResource("6_0sa1g")
+shader_parameter/foam_map = ExtResource("6_ids4x")
+shader_parameter/foam_noise = ExtResource("5_ids4x")
+shader_parameter/water_color_shallow = Color(0.134, 0.16, 0.22, 1)
+shader_parameter/water_color_deep = Color(0.00429233, 0.0146696, 0.136308, 1)
+shader_parameter/water_cubemap_intensity = 0.5
+shader_parameter/water_gloss_base = 1.15
+shader_parameter/water_gloss_scale = 0.1
+shader_parameter/water_specular = 1.0
+shader_parameter/water_foam_scale = 0.3
+shader_parameter/water_foam_distort_factor = 0.1
+shader_parameter/water_foam_strength = 0.6
+shader_parameter/water_fresnel_bias = 0.01
+shader_parameter/water_fresnel_pow = 4.3
+shader_parameter/water_refraction_scale = 500.0
+shader_parameter/water_normal_strength = 0.5
+shader_parameter/water_wave1_scale = Vector2(10, 10)
+shader_parameter/water_wave1_rotation = -0.35
+shader_parameter/water_wave1_speed = 0.01
+shader_parameter/water_wave1_flatten = 1.5
+shader_parameter/water_wave2_scale = Vector2(2, 1)
+shader_parameter/water_wave2_rotation = -1.6
+shader_parameter/water_wave2_speed = 0.016
+shader_parameter/water_wave2_flatten = 1.5
+shader_parameter/water_wave3_scale = Vector2(0.2, 0.1)
+shader_parameter/water_wave3_rotation = 1.73
+shader_parameter/water_wave3_speed = 0.005
+shader_parameter/water_wave3_flatten = 1.5
+shader_parameter/water_flow_speed = 0.005
+shader_parameter/water_flow_normal_scale = 0.025
+shader_parameter/flow_normal_uv_scale = 0.4
+shader_parameter/flow_normal_speed = 0.075
+shader_parameter/foam_factor_near = 0.5
+shader_parameter/foam_factor_far = 1.0
+shader_parameter/noise_scale = 0.25
+shader_parameter/noise_speed = 2.0
+shader_parameter/river_mask = ExtResource("11_7j2xk")
+shader_parameter/river_bottom_diffuse = ExtResource("8_1dj06")
+shader_parameter/river_bottom_normal = ExtResource("10_nhnvl")
+shader_parameter/river_bottom_gloss = ExtResource("9_xr17l")
+shader_parameter/flatten_mult = 1.0
+shader_parameter/depth_fake_factor = 2.0
+shader_parameter/ocean_fade_rate = 0.8
+shader_parameter/river_depth = 0.15
+shader_parameter/river_elevation_adjust = 0.1
+shader_parameter/beach_mask = ExtResource("4_ourjj")
+shader_parameter/beach_water_depth = 0.2
+shader_parameter/beach_transition_width = 0.1
+shader_parameter/beach_wave_strength = 0.7
+shader_parameter/beach_mediterranean_mask = ExtResource("6_6dmp8")
+shader_parameter/beach_mediterranean_diffuse = ExtResource("5_1qwvf")
+shader_parameter/beach_mediterranean_normal = ExtResource("7_yppuy")
+shader_parameter/beach_mediterranean_properties = ExtResource("8_5xa3j")
+shader_parameter/beach_mediterranean_roughness = 0.75
+shader_parameter/beach_mediterranean_metallic = 0.0
+shader_parameter/beach_mediterranean_transition_width = 0.1
+shader_parameter/beach_mediterranean_normal_strength = 0.8
+shader_parameter/beach_mediterranean_water_depth = 0.18
+shader_parameter/beach_mediterranean_wave_strength = 1.1
+shader_parameter/beach_pebbles_mask = ExtResource("11_muxhi")
+shader_parameter/beach_pebbles_diffuse = ExtResource("10_tpaui")
+shader_parameter/beach_pebbles_normal = ExtResource("12_sha56")
+shader_parameter/beach_pebbles_properties = ExtResource("13_botlc")
+shader_parameter/beach_pebbles_roughness = 0.6
+shader_parameter/beach_pebbles_metallic = 0.05
+shader_parameter/beach_pebbles_transition_width = 0.15
+shader_parameter/beach_pebbles_normal_strength = 1.0
+shader_parameter/beach_pebbles_water_depth = 0.25
+shader_parameter/beach_pebbles_wave_strength = 0.9
+shader_parameter/border_width = 1.0
+shader_parameter/border_sharpness = 2.0
+shader_parameter/border_blend = 0.8
+shader_parameter/border_glow_color = Vector3(1, 1, 1)
+shader_parameter/border_glow_intensity = 0.0
+shader_parameter/border_animation_speed = 0.5
+shader_parameter/flat_map_mode = false
+shader_parameter/border_water = ExtResource("30_x64u8")
+shader_parameter/show_water_borders = true
+shader_parameter/border_province = ExtResource("21_0euus")
+shader_parameter/border_highlighted_province = ExtResource("15_8dqox")
+shader_parameter/selection_highlight = ExtResource("45_rb4c8")
+shader_parameter/selection_highlight_flat_map = ExtResource("46_cmdgn")
+shader_parameter/show_province_borders = true
+shader_parameter/is_selected_province = false
+shader_parameter/is_hovered_province = false
+shader_parameter/border_county = ExtResource("13_v8o3o")
+shader_parameter/show_county_borders = true
+shader_parameter/border_domain = ExtResource("14_bon3p")
+shader_parameter/show_domain_borders = false
+shader_parameter/border_other_realm = ExtResource("20_34nyc")
+shader_parameter/border_my_realm = ExtResource("19_sdny5")
+shader_parameter/border_sub_realm = ExtResource("26_opga5")
+shader_parameter/border_hovered_realm = ExtResource("16_nkvel")
+shader_parameter/border_hovered_realm_flat_map = ExtResource("17_1b17w")
+shader_parameter/border_selected_realm = ExtResource("24_b47yu")
+shader_parameter/border_selected_realm_flat_map = ExtResource("25_osped")
+shader_parameter/border_realm_explorer_independent = ExtResource("22_lvep3")
+shader_parameter/border_realm_explorer_vassal = ExtResource("23_s6e4b")
+shader_parameter/my_top_realm = ExtResource("39_wi8oj")
+shader_parameter/show_realm_borders = true
+shader_parameter/is_my_realm = false
+shader_parameter/border_war = ExtResource("27_s6mca")
+shader_parameter/border_war_ally = ExtResource("28_rkdeu")
+shader_parameter/border_war_target = ExtResource("29_6pall")
+shader_parameter/border_civil_war = ExtResource("12_mexa3")
+shader_parameter/show_war_borders = true
+shader_parameter/is_at_war = false
+shader_parameter/is_war_target = false
+shader_parameter/is_civil_war = false
+shader_parameter/border_impassable = ExtResource("18_odrbf")
+shader_parameter/epidemic = ExtResource("32_eyrhb")
+shader_parameter/struggle = ExtResource("47_rhtbj")
+shader_parameter/struggle_involved = ExtResource("49_doahm")
+shader_parameter/struggle_interloper = ExtResource("48_tdfd1")
+shader_parameter/struggle_uninvolved = ExtResource("50_n5i3u")
+shader_parameter/debug = ExtResource("31_lndps")
+shader_parameter/is_in_struggle = false

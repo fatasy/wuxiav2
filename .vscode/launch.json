@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             "program": "",
             "cwd": "${workspaceFolder}",
-            // "console": "internalConsole",
+            "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
             "pipeTransport": {
                 "pipeCwd": "${workspaceFolder}",

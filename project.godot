@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="Wuxia"
-run/main_scene="uid://cvo8nhba60lss"
+run/main_scene="uid://qd1b70hfulsc"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Paths="*res://Paths.cs"
-MapData="*res://map/MapData.cs"
 
 [dotnet]
 

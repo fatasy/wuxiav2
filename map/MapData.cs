@@ -28,7 +28,7 @@ public partial class MapData : Node
 
 
 
-        Dictionary data = JsonHelper.Load(Paths.Map);
+        Dictionary data = JsonHelper.Load("res://assets/map/map.json");
         Dictionary info = data["info"].AsGodotDictionary();
         width = (int)info["width"];
         height = (int)info["height"];

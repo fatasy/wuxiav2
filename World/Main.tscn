@@ -1,0 +1,89 @@
+[gd_scene load_steps=17 format=3 uid="uid://qd1b70hfulsc"]
+
+[ext_resource type="Script" uid="uid://bh4fl0v0pn8bd" path="res://World/Main.cs" id="1_il6x7"]
+[ext_resource type="Texture2D" uid="uid://bphsifit2w2po" path="res://assets/map/provices.png" id="2_dkcsm"]
+[ext_resource type="PackedScene" uid="uid://cjlepjgwnowes" path="res://player/player.tscn" id="2_o14yy"]
+[ext_resource type="Script" uid="uid://dtoktui87anef" path="res://map/MapGenerator.cs" id="4_4tara"]
+[ext_resource type="Material" uid="uid://bq6uv1mtp1i0x" path="res://map/Terrain/TerrainMaterial.tres" id="5_wc48y"]
+[ext_resource type="Shader" uid="uid://dqxdipvuktcm5" path="res://Shaders/WaterShader.gdshader" id="182_4mu6y"]
+[ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="184_t5fbi"]
+[ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="185_h52wd"]
+[ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="186_am23a"]
+[ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="187_jq3b1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wc48y"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ay062"]
+sky_material = SubResource("ProceduralSkyMaterial_wc48y")
+
+[sub_resource type="Environment" id="Environment_h26ud"]
+background_mode = 2
+sky = SubResource("Sky_ay062")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ay062"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1x4ib"]
+render_priority = 0
+shader = ExtResource("182_4mu6y")
+shader_parameter/color_shallow = Color(0.1, 0.3, 0.5, 0.8)
+shader_parameter/color_deep = Color(0.05, 0.15, 0.25, 0.9)
+shader_parameter/glossiness = 0.766667
+shader_parameter/specular_intensity = 1.0
+shader_parameter/fresnel_bias = 0.01
+shader_parameter/fresnel_power = 4.3
+shader_parameter/refraction_scale = 0.1
+shader_parameter/wave_normal_texture1 = ExtResource("186_am23a")
+shader_parameter/wave_normal_texture2 = ExtResource("187_jq3b1")
+shader_parameter/foam_texture = ExtResource("184_t5fbi")
+shader_parameter/noise_texture = ExtResource("185_h52wd")
+shader_parameter/wave1_scale = Vector2(10, 10)
+shader_parameter/wave1_speed = 0.01
+shader_parameter/wave1_direction = -0.35
+shader_parameter/wave1_flatten = 1.5
+shader_parameter/wave2_scale = Vector2(2, 1)
+shader_parameter/wave2_speed = 0.016
+shader_parameter/wave2_direction = -1.6
+shader_parameter/wave2_flatten = 1.5
+shader_parameter/foam_scale = 0.3
+shader_parameter/foam_strength = 0.6
+shader_parameter/foam_shore_mask_depth = 0.5
+shader_parameter/foam_shore_mask_sharpness = 5.0
+shader_parameter/time_scale = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wc48y"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("player", "Map")]
+script = ExtResource("1_il6x7")
+player = NodePath("Player")
+Map = NodePath("Terrain")
+ProvinceMap = ExtResource("2_dkcsm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h26ud")
+
+[node name="Player" parent="." instance=ExtResource("2_o14yy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3496.33, 242.026, -1665.64)
+
+[node name="Terrain" type="Node3D" parent="."]
+script = ExtResource("4_4tara")
+HeightmapPath = "res://assets/map/heightmap.png"
+ProvinceImagePath = "res://assets/map/provices.png"
+NormalMapPath = "res://assets/map/normalmap.png"
+TerrainMaterial = ExtResource("5_wc48y")
+HeightScale = 100.0
+ScatterMesh = SubResource("PlaneMesh_ay062")
+
+[node name="Water" type="MeshInstance3D" parent="."]
+transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 4096, 0, 3, 0)
+visible = false
+material_override = SubResource("ShaderMaterial_1x4ib")
+mesh = SubResource("PlaneMesh_wc48y")
+skeleton = NodePath("")
