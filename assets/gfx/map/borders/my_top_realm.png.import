@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p5l2uptcwoy0"
-path.s3tc="res://.godot/imported/my_top_realm.png-269c1cf9d644a85430615322984d2616.s3tc.ctex"
+path="res://.godot/imported/my_top_realm.png-269c1cf9d644a85430615322984d2616.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/gfx/map/borders/my_top_realm.png"
-dest_files=["res://.godot/imported/my_top_realm.png-269c1cf9d644a85430615322984d2616.s3tc.ctex"]
+dest_files=["res://.godot/imported/my_top_realm.png-269c1cf9d644a85430615322984d2616.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

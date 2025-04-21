@@ -17,9 +17,8 @@ bool process_beach(vec2 uv, inout vec3 albedo, inout vec3 normal, inout float ro
     vec4 mask_color = texture(beach_mask, uv);
     
     // Se não for uma praia, retornamos false
-    if (mask_color.r < 0.2) {
-        return false;
-    }
+    if (mask_color.r < 0.01) return false;
+    
     
     // Usamos o valor da máscara para determinar a transição entre areia e água
     float beach_value = mask_color.r;

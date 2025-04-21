@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0ht7hnhhj8k2"]
+
+[resource]
+resource_name = "Bark"
+cull_mode = 2
+albedo_color = Color(0.331533, 0.236081, 0.123491, 1)
+roughness = 0.5

@@ -1,4 +1,5 @@
 using Godot;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,13 +13,12 @@ namespace Wuxia
         [Export] public string NormalMapPath;
         [Export] public ShaderMaterial TerrainMaterial;
         [Export] public float HeightScale = 50f;
-        [Export] public int SimplificationFactor = 4;
+        [Export] public int SimplificationFactor = 1;
         [Export] public new float Scale = 1.0f;
-        [Export] public int ChunkSize = 256;
+        [Export] public int ChunkSize = 64;
         [Export] public Mesh ScatterMesh;
 
-
-
+        public event Action<Boolean> OnFinishedGenerating;
 
         private bool isGenerating;
 
@@ -66,11 +66,12 @@ namespace Wuxia
                     }
 
                     await Task.WhenAll(tasks.Where(static t => t != null));
-                    System.GC.Collect(); // Força coleta de lixo após cada lote
+                    GC.Collect(); // Força coleta de lixo após cada lote
                 }
             }
 
             isGenerating = false;
+            OnFinishedGenerating?.Invoke(true);
         }
 
         private async Task GenerateChunkAsync(int chunkX, int chunkY, Image heightMap)

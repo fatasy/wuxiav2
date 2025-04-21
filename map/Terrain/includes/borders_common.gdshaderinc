@@ -14,31 +14,36 @@ uniform bool flat_map_mode = false;
 
 // Função para aplicar a textura da borda com efeitos
 vec4 apply_border_texture(sampler2D border_texture, float mask_value, vec2 uv, vec3 base_color, bool animate, bool add_glow) {
-    if (mask_value < 0.1) {
-        return vec4(base_color, 1.0); // Sem borda
-    }
-    
     // Obter cor da textura de borda
     vec4 border_color = texture(border_texture, uv);
     
-    // Calcular intensidade da borda baseada no valor da máscara
-    float border_intensity = smoothstep(0.5 - border_sharpness * 0.01, 0.5 + border_sharpness * 0.01, mask_value);
+    // Escalar coordenadas UV para ajuste de resolução/repetição
+    vec2 scaled_uv = uv * 100.0; // Ajuste esse valor para mudar a escala/densidade do padrão
     
     // Adicionar animação sutil
     if (animate) {
-        float animation_offset = sin(TIME * border_animation_speed) * 0.1;
-        border_intensity += animation_offset;
-        border_intensity = clamp(border_intensity, 0.0, 1.0);
+        vec2 animated_uv = scaled_uv;
+        animated_uv.x += sin(TIME * border_animation_speed) * 0.5;
+        animated_uv.y += cos(TIME * border_animation_speed) * 0.5;
+        // Usar as UVs animadas para obter a textura
+        border_color = texture(border_texture, animated_uv * 0.01); // Reverter escala
+    } else {
+        // Usar UVs escaladas para texturas não animadas
+        border_color = texture(border_texture, scaled_uv * 0.01); // Reverter escala
     }
     
     // Adicionar glow para bordas especiais
     vec3 glow = vec3(0.0);
     if (add_glow) {
         glow = border_glow_color * border_glow_intensity * (1.0 + 0.2 * sin(TIME * 2.0));
+        border_color.rgb += glow;
     }
     
-    // Misturar cor base com a cor da borda
-    vec3 final_color = mix(base_color, border_color.rgb + glow, border_intensity * border_color.a * border_blend);
+    // Usar a máscara para criar uma transição suave entre a borda e o terreno
+    float blend_factor = smoothstep(0.0, 0.4, mask_value);
+    
+    // Misturar a cor base com a cor da borda usando a máscara suave
+    vec3 final_color = mix(base_color, border_color.rgb, blend_factor * border_color.a);
     
     return vec4(final_color, 1.0);
 }

@@ -1,15 +1,24 @@
-[gd_scene load_steps=17 format=3 uid="uid://qd1b70hfulsc"]
+[gd_scene load_steps=26 format=3 uid="uid://qd1b70hfulsc"]
 
 [ext_resource type="Script" uid="uid://bh4fl0v0pn8bd" path="res://World/Main.cs" id="1_il6x7"]
 [ext_resource type="Texture2D" uid="uid://bphsifit2w2po" path="res://assets/map/provices.png" id="2_dkcsm"]
 [ext_resource type="PackedScene" uid="uid://cjlepjgwnowes" path="res://player/player.tscn" id="2_o14yy"]
 [ext_resource type="Script" uid="uid://dtoktui87anef" path="res://map/MapGenerator.cs" id="4_4tara"]
 [ext_resource type="Material" uid="uid://bq6uv1mtp1i0x" path="res://map/Terrain/TerrainMaterial.tres" id="5_wc48y"]
-[ext_resource type="Shader" uid="uid://dqxdipvuktcm5" path="res://Shaders/WaterShader.gdshader" id="182_4mu6y"]
-[ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="184_t5fbi"]
-[ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="185_h52wd"]
-[ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="186_am23a"]
-[ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="187_jq3b1"]
+[ext_resource type="Script" uid="uid://ds5jnr0kfvjg0" path="res://map/ForestGenerator.cs" id="6_8rcjl"]
+[ext_resource type="Material" uid="uid://0hlg76xeaswy" path="res://assets/map/terrain/forest/Leaves.tres" id="8_3venj"]
+[ext_resource type="ArrayMesh" uid="uid://brqsh7n331bp8" path="res://wewew.res" id="8_4tara"]
+[ext_resource type="Script" uid="uid://bwb745qu2bbi1" path="res://map/Water/WaterManager.cs" id="9_wc48y"]
+[ext_resource type="Shader" uid="uid://dasm80j3c7dhf" path="res://map/Water/WaterShader.gdshader" id="10_ay062"]
+[ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="11_oarmj"]
+[ext_resource type="Cubemap" uid="uid://b3dyji3fswm35" path="res://assets/gfx/map/environment/cape_hill_8k_cube_specular.dds" id="12_uvgy0"]
+[ext_resource type="Texture2D" uid="uid://dwnhr8qgomahh" path="res://assets/gfx/map/water/flowmap.png" id="13_evxhr"]
+[ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="14_3qrpt"]
+[ext_resource type="Texture2D" uid="uid://bgtacnn6ybjbk" path="res://assets/gfx/map/water/foam_map.png" id="15_iqvox"]
+[ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="16_lmxvs"]
+[ext_resource type="Texture2D" uid="uid://braxbkt5ergyf" path="res://assets/gfx/map/water/foam_ramp.png" id="17_u0ka7"]
+[ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="18_irjxl"]
+[ext_resource type="Texture2D" uid="uid://weo0l4unrawd" path="res://assets/gfx/map/water/watercolor_rgb_waterspec_a.png" id="19_a6554"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wc48y"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -21,40 +30,89 @@ sky_material = SubResource("ProceduralSkyMaterial_wc48y")
 [sub_resource type="Environment" id="Environment_h26ud"]
 background_mode = 2
 sky = SubResource("Sky_ay062")
-tonemap_mode = 2
+ambient_light_source = 3
+ambient_light_color = Color(0.13, 0.13, 0.13, 1)
+ambient_light_sky_contribution = 0.7
+ambient_light_energy = 0.7
+tonemap_mode = 3
+tonemap_exposure = 0.9
+ssao_enabled = true
+ssao_intensity = 1.0
 glow_enabled = true
+adjustment_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ay062"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1x4ib"]
+[sub_resource type="BoxMesh" id="BoxMesh_oarmj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6vff"]
 render_priority = 0
-shader = ExtResource("182_4mu6y")
-shader_parameter/color_shallow = Color(0.1, 0.3, 0.5, 0.8)
-shader_parameter/color_deep = Color(0.05, 0.15, 0.25, 0.9)
-shader_parameter/glossiness = 0.766667
-shader_parameter/specular_intensity = 1.0
-shader_parameter/fresnel_bias = 0.01
-shader_parameter/fresnel_power = 4.3
-shader_parameter/refraction_scale = 0.1
-shader_parameter/wave_normal_texture1 = ExtResource("186_am23a")
-shader_parameter/wave_normal_texture2 = ExtResource("187_jq3b1")
-shader_parameter/foam_texture = ExtResource("184_t5fbi")
-shader_parameter/noise_texture = ExtResource("185_h52wd")
-shader_parameter/wave1_scale = Vector2(10, 10)
-shader_parameter/wave1_speed = 0.01
-shader_parameter/wave1_direction = -0.35
-shader_parameter/wave1_flatten = 1.5
-shader_parameter/wave2_scale = Vector2(2, 1)
-shader_parameter/wave2_speed = 0.016
-shader_parameter/wave2_direction = -1.6
-shader_parameter/wave2_flatten = 1.5
+shader = ExtResource("10_ay062")
+shader_parameter/color_shallow = Color(0, 0.5, 1, 0.8)
+shader_parameter/color_deep = Color(0, 0.3, 0.6, 0.8)
+shader_parameter/color_map_tint = Color(0.891914, 0.937942, 0.999999, 1)
+shader_parameter/color_map_tint_alpha = 1.0
+shader_parameter/color_map_tint_start_height = 0.0
+shader_parameter/color_map_tint_end_height = 10000.0
+shader_parameter/diffuse_multiplier = 0.0
+shader_parameter/glossiness_base = 1.15
+shader_parameter/glossiness_scale = 0.1
+shader_parameter/zoomed_out_gloss_scale_offset = 0.1
+shader_parameter/specular_intensity = 0.5
+shader_parameter/specular_factor = 0.01
+shader_parameter/water_color_texture = ExtResource("19_a6554")
+shader_parameter/ambient_normal_texture = ExtResource("11_oarmj")
+shader_parameter/flow_map_texture = ExtResource("13_evxhr")
+shader_parameter/flow_normal_texture = ExtResource("14_3qrpt")
+shader_parameter/cube_map_texture = ExtResource("12_uvgy0")
+shader_parameter/foam_texture = ExtResource("18_irjxl")
+shader_parameter/foam_ramp_texture = ExtResource("17_u0ka7")
+shader_parameter/foam_map_texture = ExtResource("15_iqvox")
+shader_parameter/foam_noise_texture = ExtResource("16_lmxvs")
+shader_parameter/cubemap_intensity = 0.5
 shader_parameter/foam_scale = 0.3
-shader_parameter/foam_strength = 0.6
+shader_parameter/foam_distort_factor = 0.1
 shader_parameter/foam_shore_mask_depth = 0.5
 shader_parameter/foam_shore_mask_sharpness = 5.0
+shader_parameter/foam_noise_scale = 0.005
+shader_parameter/foam_noise_speed = 0.025
+shader_parameter/foam_strength = 0.6
+shader_parameter/zoomed_in_height = 100.0
+shader_parameter/zoomed_out_height = 750.0
+shader_parameter/fresnel_bias = 0.01
+shader_parameter/zoomed_out_fresnel_bias_offset = 0.15
+shader_parameter/fresnel_power = 4.3
+shader_parameter/zoomed_out_fresnel_power_offset = -2.0
+shader_parameter/reflection_flatten = 3.0
+shader_parameter/refraction_shore_mask_depth = 3.0
+shader_parameter/refraction_shore_mask_sharpness = 1.0
+shader_parameter/refraction_fade_start = 100.0
+shader_parameter/refraction_fade_end = 500.0
+shader_parameter/refraction_scale = 0.1
+shader_parameter/wave_flatness = 1.5
+shader_parameter/wave1_scale = Vector2(10, 10)
+shader_parameter/wave1_rotation = -0.35
+shader_parameter/wave1_speed = 0.01
+shader_parameter/wave1_normal_flatten = 1.5
+shader_parameter/wave2_scale = Vector2(2, 1)
+shader_parameter/wave2_rotation = -1.6
+shader_parameter/wave2_speed = 0.016
+shader_parameter/wave2_normal_flatten = 1.5
+shader_parameter/wave3_scale = Vector2(0.2, 0.1)
+shader_parameter/wave3_rotation = 1.72508
+shader_parameter/wave3_speed = 0.005
+shader_parameter/wave3_normal_flatten = 1.5
+shader_parameter/flow_speed = 0.005
+shader_parameter/zoomed_out_flow_speed_offset = 0.03
+shader_parameter/flow_normal_scale = 0.025
+shader_parameter/flow_normal_flatten = 1.5
+shader_parameter/fade_shore_mask_depth = 0.5
+shader_parameter/fade_shore_mask_sharpness = 5.0
+shader_parameter/see_through_density = 0.8
+shader_parameter/see_through_density_angle_offset = 0.0
+shader_parameter/see_through_shore_mask_depth = 20.0
+shader_parameter/see_through_shore_mask_sharpness = 1.0
 shader_parameter/time_scale = 1.0
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_wc48y"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("player", "Map")]
 script = ExtResource("1_il6x7")
@@ -63,14 +121,18 @@ Map = NodePath("Terrain")
 ProvinceMap = ExtResource("2_dkcsm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, -3877.38, 0, -1628.6)
+light_energy = 0.785
+light_indirect_energy = 0.677
+light_volumetric_fog_energy = 0.731
+light_specular = 0.892
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h26ud")
 
 [node name="Player" parent="." instance=ExtResource("2_o14yy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3496.33, 242.026, -1665.64)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3310.81, 242.026, -1294.6)
 
 [node name="Terrain" type="Node3D" parent="."]
 script = ExtResource("4_4tara")
@@ -81,9 +143,25 @@ TerrainMaterial = ExtResource("5_wc48y")
 HeightScale = 100.0
 ScatterMesh = SubResource("PlaneMesh_ay062")
 
-[node name="Water" type="MeshInstance3D" parent="."]
-transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 4096, 0, 3, 0)
+[node name="Florest" type="Node3D" parent="." node_paths=PackedStringArray("TerrainNode")]
 visible = false
-material_override = SubResource("ShaderMaterial_1x4ib")
-mesh = SubResource("PlaneMesh_wc48y")
-skeleton = NodePath("")
+script = ExtResource("6_8rcjl")
+TreeMesh = ExtResource("8_4tara")
+TreeMaterial = ExtResource("8_3venj")
+TerrainNode = NodePath("../Terrain")
+
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_oarmj")
+script = ExtResource("9_wc48y")
+waterMaterial = SubResource("ShaderMaterial_p6vff")
+waterSize = Vector2(8192, 4096)
+waterSubdivisions = Vector2i(16, 16)
+waterFoamScale = 0.3
+waterFoamStrength = 0.6
+waterRefractionScale = 0.1
+waterWave1Scale = Vector2(10, 10)
+waterWave1Speed = 0.01
+waterWave1NormalFlatten = 1.5
+waterWave2Scale = Vector2(2, 1)
+waterWave2Speed = 0.016
+waterWave2NormalFlatten = 1.5

@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=54 format=3 uid="uid://bq6uv1mtp1i0x"]
+[gd_resource type="ShaderMaterial" load_steps=261 format=3 uid="uid://bq6uv1mtp1i0x"]
 
 [ext_resource type="Shader" uid="uid://13eupb5v3xi7" path="res://map/Terrain/Terrain.gdshader" id="1_fv0dh"]
 [ext_resource type="Texture2D" uid="uid://cfj06u18hjmu3" path="res://assets/gfx/map/water/ambient_normal.png" id="2_xoeih"]
@@ -6,25 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://b7l10lh668kxk" path="res://assets/gfx/map/water/flow_normal.png" id="3_fmgtm"]
 [ext_resource type="Texture2D" uid="uid://cqs4pcamecg2k" path="res://assets/map/normalmap.png" id="3_ulu2h"]
 [ext_resource type="Texture2D" uid="uid://dwnhr8qgomahh" path="res://assets/gfx/map/water/flowmap.png" id="4_m2d5o"]
-[ext_resource type="Texture2D" uid="uid://ckah42w36dltc" path="res://assets/map/terrain/beach/beach_02_mask.png" id="4_ourjj"]
-[ext_resource type="Texture2D" uid="uid://bw08yexfk62ep" path="res://assets/map/terrain/beach/beach_02_mediterranean_diffuse.png" id="5_1qwvf"]
 [ext_resource type="Texture2D" uid="uid://dexagf7rn87go" path="res://assets/gfx/map/water/foam_noise.png" id="5_ids4x"]
 [ext_resource type="Texture2D" uid="uid://braxbkt5ergyf" path="res://assets/gfx/map/water/foam_ramp.png" id="6_0sa1g"]
-[ext_resource type="Texture2D" uid="uid://76vfufigi4mp" path="res://assets/map/terrain/beach/beach_02_mediterranean_mask.png" id="6_6dmp8"]
 [ext_resource type="Texture2D" uid="uid://bgtacnn6ybjbk" path="res://assets/gfx/map/water/foam_map.png" id="6_ids4x"]
 [ext_resource type="Texture2D" uid="uid://c77h7vyrssga6" path="res://assets/gfx/map/water/foam.png" id="7_r3efk"]
-[ext_resource type="Texture2D" uid="uid://bk418j1evk81k" path="res://assets/map/terrain/beach/beach_02_mediterranean_normal.png" id="7_yppuy"]
-[ext_resource type="Texture2D" uid="uid://d38ybf4ghgv76" path="res://assets/map/rivers/river_bottom_diffuse.png" id="8_1dj06"]
-[ext_resource type="Texture2D" uid="uid://dfd23c13wi2y6" path="res://assets/map/terrain/beach/beach_02_mediterranean_properties.png" id="8_5xa3j"]
-[ext_resource type="Texture2D" uid="uid://b2g28ieg2ahh7" path="res://assets/map/rivers/river_bottom_gloss.png" id="9_xr17l"]
-[ext_resource type="Texture2D" uid="uid://dc6okreon6qb3" path="res://assets/map/rivers/river_bottom_normal.png" id="10_nhnvl"]
-[ext_resource type="Texture2D" uid="uid://c8lrvwj5mcxtc" path="res://assets/map/terrain/beach/beach_02_pebbles_diffuse.png" id="10_tpaui"]
-[ext_resource type="Texture2D" uid="uid://d4k8xjvpqmckn" path="res://assets/map/rivers.png" id="11_7j2xk"]
-[ext_resource type="Texture2D" uid="uid://ds5fmoglrpt4b" path="res://assets/map/terrain/beach/beach_02_pebbles_mask.png" id="11_muxhi"]
 [ext_resource type="Texture2D" uid="uid://bhsqjdoajy4r1" path="res://assets/map/terrain/colormap.png" id="12_8ky2r"]
 [ext_resource type="Texture2D" uid="uid://c1m40mg40v45w" path="res://assets/gfx/map/borders/border_civil_war.png" id="12_mexa3"]
-[ext_resource type="Texture2D" uid="uid://dvppaedt6362" path="res://assets/map/terrain/beach/beach_02_pebbles_normal.png" id="12_sha56"]
-[ext_resource type="Texture2D" uid="uid://baxjhlxr3y4pj" path="res://assets/map/terrain/beach/beach_02_pebbles_properties.png" id="13_botlc"]
 [ext_resource type="Texture2D" uid="uid://weo0l4unrawd" path="res://assets/gfx/map/water/watercolor_rgb_waterspec_a.png" id="13_ionn5"]
 [ext_resource type="Texture2D" uid="uid://bq5r10inyk5g6" path="res://assets/gfx/map/borders/border_county.png" id="13_v8o3o"]
 [ext_resource type="Texture2D" uid="uid://csqhhs82dxh1k" path="res://assets/gfx/map/borders/border_domain.png" id="14_bon3p"]
@@ -44,24 +31,239 @@
 [ext_resource type="Texture2D" uid="uid://duvvetroujgwb" path="res://assets/gfx/map/borders/border_war_ally.png" id="28_rkdeu"]
 [ext_resource type="Texture2D" uid="uid://bvm1ggvn1f1wc" path="res://assets/gfx/map/borders/border_war_target.png" id="29_6pall"]
 [ext_resource type="Texture2D" uid="uid://m7ib3nrn82vj" path="res://assets/gfx/map/borders/border_water.png" id="30_x64u8"]
+[ext_resource type="Texture2D" uid="uid://p65w7vua1opi" path="res://assets/map/terrain/coastline/coastline_cliff_brown_mask.png" id="31_6xr5q"]
 [ext_resource type="Texture2D" uid="uid://b2xhco33mdili" path="res://assets/gfx/map/borders/debug.png" id="31_lndps"]
 [ext_resource type="Texture2D" uid="uid://bdubvrbupfeb6" path="res://assets/gfx/map/borders/epidemic.png" id="32_eyrhb"]
+[ext_resource type="Texture2D" uid="uid://8n1h3ltkbksq" path="res://assets/map/terrain/coastline/coastline_cliff_desert_diffuse.png" id="32_g6d1x"]
+[ext_resource type="Texture2D" uid="uid://h3m3pgmy74wa" path="res://assets/map/terrain/coastline/coastline_cliff_desert_mask.png" id="33_u5gwh"]
+[ext_resource type="Texture2D" uid="uid://c5qkhwgk323u8" path="res://assets/map/terrain/coastline/coastline_cliff_grey_diffuse.png" id="34_urdkw"]
+[ext_resource type="Texture2D" uid="uid://c2bh4vb8u2gcu" path="res://assets/map/terrain/coastline/coastline_cliff_grey_mask.png" id="35_v28nx"]
+[ext_resource type="Texture2D" uid="uid://b5v1vettfgvp0" path="res://assets/map/terrain/coastline/coastline_cliff_grey_normal.png" id="36_uw2si"]
+[ext_resource type="Texture2D" uid="uid://bukxhrkpyhqth" path="res://assets/map/terrain/coastline/coastline_cliff_grey_properties.png" id="37_44dlr"]
+[ext_resource type="Texture2D" uid="uid://dy5u1n1woebj" path="res://assets/map/terrain/desert/desert_01_diffuse.png" id="39_bgb1h"]
+[ext_resource type="Texture2D" uid="uid://b47o7sc3t1j0w" path="res://assets/map/terrain/drylands/drylands_01_cracked_diffuse.png" id="39_qmqik"]
 [ext_resource type="Texture2D" uid="uid://p5l2uptcwoy0" path="res://assets/gfx/map/borders/my_top_realm.png" id="39_wi8oj"]
-[ext_resource type="Texture2D" uid="uid://u1ol5gd6ueom" path="res://assets/gfx/map/borders/selection_highlight.png" id="45_rb4c8"]
+[ext_resource type="Texture2D" uid="uid://c3dj8srxkssbm" path="res://assets/map/terrain/drylands/drylands_01_cracked_mask.png" id="40_76qmd"]
+[ext_resource type="Texture2D" uid="uid://bcpdk5v5wxo3k" path="res://assets/map/terrain/desert/desert_01_mask.png" id="40_gapbp"]
+[ext_resource type="Texture2D" uid="uid://d14wupnii146f" path="res://assets/map/terrain/farmland/farmland_01_diffuse.png" id="40_j6p8y"]
+[ext_resource type="Texture2D" uid="uid://c3hpjcij62l1f" path="res://assets/map/terrain/desert/desert_01_normal.png" id="41_1ivrw"]
+[ext_resource type="Texture2D" uid="uid://ukd2vtm5ssfb" path="res://assets/map/terrain/farmland/farmland_01_mask.png" id="41_can6n"]
+[ext_resource type="Texture2D" uid="uid://bnmq2phgq0t3d" path="res://assets/map/terrain/drylands/drylands_01_cracked_normal.png" id="41_ju8ms"]
+[ext_resource type="Texture2D" uid="uid://bvii4i7miqj5r" path="res://assets/map/terrain/desert/desert_01_properties.png" id="42_6ftht"]
+[ext_resource type="Texture2D" uid="uid://t1xju8yiwitd" path="res://assets/map/terrain/drylands/drylands_01_cracked_properties.png" id="42_dl7sr"]
+[ext_resource type="Texture2D" uid="uid://bin62ont5h3s1" path="res://assets/map/terrain/farmland/farmland_01_normal.png" id="42_txsxw"]
+[ext_resource type="Texture2D" uid="uid://bbullfg1116i5" path="res://assets/map/terrain/drylands/drylands_01_diffuse.png" id="43_286sv"]
+[ext_resource type="Texture2D" uid="uid://i0662o3y7tm4" path="res://assets/map/terrain/farmland/farmland_01_properties.png" id="43_d2xml"]
+[ext_resource type="Texture2D" uid="uid://gibdx7fdc5r6" path="res://assets/map/terrain/desert/desert_02_diffuse.png" id="43_qdlfu"]
+[ext_resource type="Texture2D" uid="uid://bmqfyypkqaw2r" path="res://assets/map/terrain/desert/desert_02_mask.png" id="44_2i5el"]
+[ext_resource type="Texture2D" uid="uid://b3snw6j31bcra" path="res://assets/map/terrain/drylands/drylands_01_grassy_diffuse.png" id="44_anc8d"]
+[ext_resource type="Texture2D" uid="uid://caf88uco3l77w" path="res://assets/map/terrain/drylands/drylands_01_grassy_mask.png" id="45_ls22c"]
+[ext_resource type="Texture2D" uid="uid://bfnrt1x7s5qpn" path="res://assets/gfx/map/borders/selection_highlight_c.png" id="45_mexa3"]
+[ext_resource type="Texture2D" uid="uid://5dwk5wt4a7l5" path="res://assets/map/terrain/desert/desert_02_normal.png" id="45_t6vql"]
 [ext_resource type="Texture2D" uid="uid://capfptaj32v21" path="res://assets/gfx/map/borders/selection_highlight_flat_map.png" id="46_cmdgn"]
+[ext_resource type="Texture2D" uid="uid://so2e1h1yjvhn" path="res://assets/map/terrain/desert/desert_02_properties.png" id="46_pafk6"]
+[ext_resource type="Texture2D" uid="uid://6bfiutygmwdq" path="res://assets/map/terrain/drylands/drylands_01_grassy_normal.png" id="46_t4y2j"]
 [ext_resource type="Texture2D" uid="uid://dvapua8lcpbn4" path="res://assets/gfx/map/borders/struggle.png" id="47_rhtbj"]
+[ext_resource type="Texture2D" uid="uid://22t28qjjey52" path="res://assets/map/terrain/desert/desert_cracked_diffuse.png" id="47_ux0q2"]
+[ext_resource type="Texture2D" uid="uid://mg0s4h3n48or" path="res://assets/map/terrain/drylands/drylands_01_grassy_properties.png" id="47_x8spr"]
+[ext_resource type="Texture2D" uid="uid://bg3jcdejwawvb" path="res://assets/map/terrain/desert/desert_cracked_mask.png" id="48_5ey6e"]
+[ext_resource type="Texture2D" uid="uid://dhuut3tv28mmu" path="res://assets/map/terrain/drylands/drylands_01_mask.png" id="48_s1bi4"]
 [ext_resource type="Texture2D" uid="uid://byg15bfvicvy5" path="res://assets/gfx/map/borders/struggle_interloper.png" id="48_tdfd1"]
 [ext_resource type="Texture2D" uid="uid://cxavdqu2ds47y" path="res://assets/gfx/map/borders/struggle_involved.png" id="49_doahm"]
+[ext_resource type="Texture2D" uid="uid://dvfjcteqqa4on" path="res://assets/map/terrain/drylands/drylands_01_normal.png" id="49_mnquw"]
+[ext_resource type="Texture2D" uid="uid://bd8tyltuv2thi" path="res://assets/map/terrain/desert/desert_cracked_normal.png" id="49_r5kx7"]
+[ext_resource type="Texture2D" uid="uid://duqc4jm3i6bsj" path="res://assets/map/terrain/drylands/drylands_01_properties.png" id="50_f4g8f"]
+[ext_resource type="Texture2D" uid="uid://df88hfrn2emwl" path="res://assets/map/terrain/desert/desert_cracked_properties.png" id="50_glu70"]
 [ext_resource type="Texture2D" uid="uid://cnttocby6h7fm" path="res://assets/gfx/map/borders/struggle_uninvolved.png" id="50_n5i3u"]
+[ext_resource type="Texture2D" uid="uid://d3g4a7he40lp" path="res://assets/map/terrain/desert/desert_flat_01_diffuse.png" id="51_16nmo"]
+[ext_resource type="Texture2D" uid="uid://blde2sa8bm53f" path="res://assets/map/terrain/plains/plains_01_desat_mask.png" id="52_7w65l"]
+[ext_resource type="Texture2D" uid="uid://b2v08jhok5ds0" path="res://assets/map/terrain/plains/plains_01_dry_diffuse.png" id="52_diibe"]
+[ext_resource type="Texture2D" uid="uid://wiufx2a1w0rw" path="res://assets/map/terrain/desert/desert_flat_01_mask.png" id="52_yhvfp"]
+[ext_resource type="Texture2D" uid="uid://dfld3bsujxaqe" path="res://assets/map/terrain/plains/plains_01_dry_mask.png" id="53_16u8h"]
+[ext_resource type="Texture2D" uid="uid://bqsbgrdb32k3v" path="res://assets/map/terrain/desert/desert_flat_01_normal.png" id="53_erje0"]
+[ext_resource type="Texture2D" uid="uid://buyv2jpk0h8a3" path="res://assets/map/terrain/plains/plains_01_diffuse.png" id="53_f7n60"]
+[ext_resource type="Texture2D" uid="uid://bwmv6o3nbaqmb" path="res://assets/map/terrain/plains/plains_01_dry_mud_diffuse.png" id="54_40g2f"]
+[ext_resource type="Texture2D" uid="uid://dtnk0ncn8xduj" path="res://assets/map/terrain/desert/desert_flat_01_properties.png" id="54_weean"]
+[ext_resource type="Texture2D" uid="uid://b5vtulmsqyqhd" path="res://assets/map/terrain/desert/desert_rocky_diffuse.png" id="55_8stcp"]
+[ext_resource type="Texture2D" uid="uid://d4h7taeq62erk" path="res://assets/map/terrain/plains/plains_01_dry_mud_mask.png" id="55_41obg"]
+[ext_resource type="Texture2D" uid="uid://b38mq0k1ja7eb" path="res://assets/map/terrain/plains/plains_01_dry_mud_normal.png" id="56_3s58i"]
+[ext_resource type="Texture2D" uid="uid://b8ac4gpktixih" path="res://assets/map/terrain/desert/desert_rocky_mask.png" id="56_7hdjr"]
+[ext_resource type="Texture2D" uid="uid://b4s6o60h2bh6h" path="res://assets/map/terrain/floodplains/floodplains_01_diffuse.png" id="56_vqa12"]
+[ext_resource type="Texture2D" uid="uid://vtsx30xijo0j" path="res://assets/map/terrain/plains/plains_01_dry_mud_properties.png" id="57_7w65l"]
+[ext_resource type="Texture2D" uid="uid://bvjvf2ka7kk44" path="res://assets/map/terrain/floodplains/floodplains_01_mask.png" id="57_8c14o"]
+[ext_resource type="Texture2D" uid="uid://duyc0iy6o5e78" path="res://assets/map/terrain/desert/desert_rocky_normal.png" id="57_vhh8q"]
+[ext_resource type="Texture2D" uid="uid://dj4jbsv6sqdp3" path="res://assets/map/terrain/desert/desert_rocky_properties.png" id="58_5yaqd"]
+[ext_resource type="Texture2D" uid="uid://c0n37nhk06c7p" path="res://assets/map/terrain/plains/plains_01_dry_normal.png" id="58_f7n60"]
+[ext_resource type="Texture2D" uid="uid://en6sefcdgbyl" path="res://assets/map/terrain/floodplains/floodplains_01_normal.png" id="58_m4u23"]
+[ext_resource type="Texture2D" uid="uid://lclmkfrnyn78" path="res://assets/map/terrain/desert/desert_wavy_01_diffuse.png" id="59_1xhu2"]
+[ext_resource type="Texture2D" uid="uid://ccvweiv8drjld" path="res://assets/map/terrain/plains/plains_01_dry_properties.png" id="59_m70d7"]
+[ext_resource type="Texture2D" uid="uid://y75oq2p3hnw3" path="res://assets/map/terrain/floodplains/floodplains_01_properties.png" id="59_ptqo7"]
+[ext_resource type="Texture2D" uid="uid://8wt8kkyob81g" path="res://assets/map/terrain/plains/plains_01_noisy_diffuse.png" id="60_j6p8y"]
+[ext_resource type="Texture2D" uid="uid://d0h66oydb46m2" path="res://assets/map/terrain/desert/desert_wavy_01_larger_diffuse.png" id="60_ssyp5"]
+[ext_resource type="Texture2D" uid="uid://cpaibvluf7wdi" path="res://assets/map/terrain/plains/plains_01_noisy_mask.png" id="61_can6n"]
+[ext_resource type="Texture2D" uid="uid://bjrosstkbw7tp" path="res://assets/map/terrain/desert/desert_wavy_01_larger_mask.png" id="61_k8uyr"]
+[ext_resource type="Texture2D" uid="uid://dm8ecf3hwnyd8" path="res://assets/map/terrain/desert/desert_wavy_01_larger_normal.png" id="62_2p6ci"]
+[ext_resource type="Texture2D" uid="uid://psv0o1b8de5l" path="res://assets/map/terrain/forest/forest_jungle_01_diffuse.png" id="62_kc5jx"]
+[ext_resource type="Texture2D" uid="uid://bsvu6qengnvmr" path="res://assets/map/terrain/plains/plains_01_mask.png" id="62_m70d7"]
+[ext_resource type="Texture2D" uid="uid://mf7xefckbafc" path="res://assets/map/terrain/plains/plains_01_noisy_normal.png" id="62_txsxw"]
+[ext_resource type="Texture2D" uid="uid://bmm14vlne5f0q" path="res://assets/map/terrain/desert/desert_wavy_01_larger_properties.png" id="63_brndy"]
+[ext_resource type="Texture2D" uid="uid://dcsi4bemqjjab" path="res://assets/map/terrain/plains/plains_01_noisy_properties.png" id="63_d2xml"]
+[ext_resource type="Texture2D" uid="uid://deu52na3scnpq" path="res://assets/map/terrain/forest/forest_jungle_01_mask.png" id="63_permo"]
+[ext_resource type="Texture2D" uid="uid://2gy6lb6ubx6d" path="res://assets/map/terrain/unmasked/diffuse0.png" id="63_x64u8"]
+[ext_resource type="Texture2D" uid="uid://gvr0rpps1e53" path="res://assets/map/terrain/plains/plains_01_rough_diffuse.png" id="64_6xr5q"]
+[ext_resource type="Texture2D" uid="uid://41j1q7f2rxmu" path="res://assets/map/terrain/desert/desert_wavy_01_mask.png" id="64_agckh"]
+[ext_resource type="Texture2D" uid="uid://fm4k74fp05af" path="res://assets/map/terrain/unmasked/diffuse1.png" id="64_lndps"]
+[ext_resource type="Texture2D" uid="uid://dao0lqs0sgds5" path="res://assets/map/terrain/forest/forest_jungle_01_normal.png" id="64_teajr"]
+[ext_resource type="Texture2D" uid="uid://chqlrtfl73lhk" path="res://assets/map/terrain/unmasked/material0.png" id="65_eyrhb"]
+[ext_resource type="Texture2D" uid="uid://dp4ttkn4frxg0" path="res://assets/map/terrain/plains/plains_01_rough_mask.png" id="65_g6d1x"]
+[ext_resource type="Texture2D" uid="uid://8yf1o5ym25q3" path="res://assets/map/terrain/forest/forest_jungle_01_properties.png" id="65_o2pgf"]
+[ext_resource type="Texture2D" uid="uid://ci6y54daeva4r" path="res://assets/map/terrain/desert/desert_wavy_01_normal.png" id="65_xdjfs"]
+[ext_resource type="Texture2D" uid="uid://bwte3q23yxgy1" path="res://assets/map/terrain/desert/desert_wavy_01_properties.png" id="66_2i538"]
+[ext_resource type="Texture2D" uid="uid://bobr3sob0vl7t" path="res://assets/map/terrain/mountain/mountain_02_b_diffuse.png" id="66_akkbo"]
+[ext_resource type="Texture2D" uid="uid://nivgqf0n4sco" path="res://assets/map/terrain/hills/hills_01_diffuse.png" id="66_hxyrm"]
+[ext_resource type="Texture2D" uid="uid://cfseqtbx58n33" path="res://assets/map/terrain/plains/plains_01_rough_normal.png" id="66_u5gwh"]
+[ext_resource type="Texture2D" uid="uid://bp4id3v2klog6" path="res://assets/map/terrain/forest/forest_leaf_01_diffuse.png" id="66_vqa12"]
+[ext_resource type="Texture2D" uid="uid://bfyp5dbo5yhmd" path="res://assets/map/terrain/unmasked/material1.png" id="66_wi8oj"]
+[ext_resource type="Texture2D" uid="uid://82ud5jplx6pc" path="res://assets/map/terrain/forest/forest_leaf_01_mask.png" id="67_8c14o"]
+[ext_resource type="Texture2D" uid="uid://btsv0i34yxt8f" path="res://assets/map/terrain/mountain/mountain_02_b_mask.png" id="67_b1w3a"]
+[ext_resource type="Texture2D" uid="uid://ccg0yisyydbnj" path="res://assets/map/terrain/plains/plains_01_normal.png" id="67_j6p8y"]
+[ext_resource type="Texture2D" uid="uid://c4q8j6ibr7efp" path="res://assets/map/terrain/hills/hills_01_mask.png" id="67_odvmt"]
+[ext_resource type="Texture2D" uid="uid://det2q22g2sh4f" path="res://assets/map/terrain/unmasked/normal0.png" id="67_rb4c8"]
+[ext_resource type="Texture2D" uid="uid://csvk7cbrvowc5" path="res://assets/map/terrain/plains/plains_01_rough_properties.png" id="67_urdkw"]
+[ext_resource type="Texture2D" uid="uid://b371uqlvfukgy" path="res://assets/map/terrain/hills/hills_01_normal.png" id="68_1p7pa"]
+[ext_resource type="Texture2D" uid="uid://c556e2q8yn26v" path="res://assets/map/terrain/plains/plains_01_properties.png" id="68_can6n"]
+[ext_resource type="Texture2D" uid="uid://d1d6kwp72s8ca" path="res://assets/map/terrain/unmasked/normal1.png" id="68_cmdgn"]
+[ext_resource type="Texture2D" uid="uid://bk7chmt3gsthr" path="res://assets/map/terrain/mountain/mountain_02_b_normal.png" id="68_j0mjc"]
+[ext_resource type="Texture2D" uid="uid://b1ti0vnobi54a" path="res://assets/map/terrain/forest/forest_leaf_01_normal.png" id="68_m4u23"]
+[ext_resource type="Texture2D" uid="uid://dskjtrst1ehsk" path="res://assets/map/terrain/mountain/mountain_02_b_properties.png" id="69_hmqxd"]
+[ext_resource type="Texture2D" uid="uid://bxfua67sy8a25" path="res://assets/map/terrain/forest/forest_leaf_01_properties.png" id="69_ptqo7"]
+[ext_resource type="Texture2D" uid="uid://cswh1g663wadg" path="res://assets/map/terrain/hills/hills_01_properties.png" id="69_q5pes"]
+[ext_resource type="Texture2D" uid="uid://dqnxvvr15g7mh" path="res://assets/map/terrain/forest/forest_pine_01_diffuse.png" id="70_k120o"]
+[ext_resource type="Texture2D" uid="uid://r0tyrnbqi54d" path="res://assets/map/terrain/hills/hills_01_rocks_diffuse.png" id="70_njl4o"]
+[ext_resource type="Texture2D" uid="uid://ck1sv5bl4v8m1" path="res://assets/map/terrain/mountain/mountain_02_c_diffuse.png" id="70_p2b5m"]
+[ext_resource type="Texture2D" uid="uid://coqr0s16hd6o1" path="res://assets/map/terrain/hills/hills_01_rocks_mask.png" id="71_24a74"]
+[ext_resource type="Texture2D" uid="uid://0emkwmkhmqkq" path="res://assets/map/terrain/forest/forest_pine_01_mask.png" id="71_q2y43"]
+[ext_resource type="Texture2D" uid="uid://vkssx0cqwyho" path="res://assets/map/terrain/mountain/mountain_02_c_mask.png" id="71_tjmh2"]
+[ext_resource type="Texture2D" uid="uid://dju2rnelh3u1b" path="res://assets/map/terrain/hills/hills_01_rocks_medi_diffuse.png" id="72_i5fmx"]
+[ext_resource type="Texture2D" uid="uid://b4doj63eajbcj" path="res://assets/map/terrain/forest/forest_pine_01_normal.png" id="72_j36qv"]
+[ext_resource type="Texture2D" uid="uid://b051in4lequ44" path="res://assets/map/terrain/mountain/mountain_02_c_normal.png" id="72_jsrqb"]
+[ext_resource type="Texture2D" uid="uid://33mpanvhbp7p" path="res://assets/map/terrain/forest/forest_pine_01_properties.png" id="73_a8j2i"]
+[ext_resource type="Texture2D" uid="uid://cfm0pgly6jp72" path="res://assets/map/terrain/hills/hills_01_rocks_medi_mask.png" id="73_pqgyg"]
+[ext_resource type="Texture2D" uid="uid://dgy03hbpy7dsn" path="res://assets/map/terrain/mountain/mountain_02_c_properties.png" id="73_w8y1w"]
+[ext_resource type="Texture2D" uid="uid://ciocfocdj2f61" path="res://assets/map/terrain/hills/hills_01_rocks_medi_normal.png" id="74_3q4e6"]
+[ext_resource type="Texture2D" uid="uid://bvffgyak5v4oa" path="res://assets/map/terrain/mountain/mountain_02_c_snow_diffuse.png" id="74_4qjjf"]
+[ext_resource type="Texture2D" uid="uid://b8narhrql3vbx" path="res://assets/map/terrain/forest/forestfloor_diffuse.png" id="74_uraeu"]
+[ext_resource type="Texture2D" uid="uid://c0a01u1jyi22i" path="res://assets/map/terrain/forest/forestfloor_mask.png" id="75_m3oya"]
+[ext_resource type="Texture2D" uid="uid://duh87bka3l2k7" path="res://assets/map/terrain/mountain/mountain_02_c_snow_mask.png" id="75_vqiaa"]
+[ext_resource type="Texture2D" uid="uid://cd1bma7pxvnox" path="res://assets/map/terrain/hills/hills_01_rocks_medi_properties.png" id="75_xoi4g"]
+[ext_resource type="Texture2D" uid="uid://lodqyk0b46nc" path="res://assets/map/terrain/hills/hills_01_rocks_normal.png" id="76_a83ds"]
+[ext_resource type="Texture2D" uid="uid://cefg2b2nqm52n" path="res://assets/map/terrain/mountain/mountain_02_c_snow_normal.png" id="76_hu6b1"]
+[ext_resource type="Texture2D" uid="uid://cv6xf7kdurrus" path="res://assets/map/terrain/forest/forestfloor_normal.png" id="76_qdtso"]
+[ext_resource type="Texture2D" uid="uid://nwsgsw2tvj5o" path="res://assets/map/terrain/forest/forestfloor_properties.png" id="77_mv5n1"]
+[ext_resource type="Texture2D" uid="uid://ba8ei2otkygta" path="res://assets/map/terrain/mountain/mountain_02_c_snow_properties.png" id="77_ot51d"]
+[ext_resource type="Texture2D" uid="uid://xxb31es3mon3" path="res://assets/map/terrain/hills/hills_01_rocks_properties.png" id="77_qrj7s"]
+[ext_resource type="Texture2D" uid="uid://dq3ide2ec40w1" path="res://assets/map/terrain/hills/hills_01_rocks_small_diffuse.png" id="78_kc5jx"]
+[ext_resource type="Texture2D" uid="uid://5ht6p1fcju3k" path="res://assets/map/terrain/mountain/mountain_02_d_diffuse.png" id="78_w7bbk"]
+[ext_resource type="Texture2D" uid="uid://pb75vt8owd66" path="res://assets/map/terrain/mountain/mountain_02_d_mask.png" id="79_0s32m"]
+[ext_resource type="Texture2D" uid="uid://da1c3ul4kwvqr" path="res://assets/map/terrain/hills/hills_01_rocks_small_mask.png" id="79_permo"]
+[ext_resource type="Texture2D" uid="uid://ccmarc65go2gb" path="res://assets/map/terrain/hills/hills_01_rocks_small_normal.png" id="80_teajr"]
+[ext_resource type="Texture2D" uid="uid://budh0bmx4us6l" path="res://assets/map/terrain/mountain/mountain_02_d_normal.png" id="80_vc3il"]
+[ext_resource type="Texture2D" uid="uid://cmmogrtxgp4k4" path="res://assets/map/terrain/mountain/mountain_02_d_properties.png" id="81_agiyt"]
+[ext_resource type="Texture2D" uid="uid://du3kg62olbq3t" path="res://assets/map/terrain/hills/hills_01_rocks_small_properties.png" id="81_o2pgf"]
+[ext_resource type="Texture2D" uid="uid://cpba6sir855e4" path="res://assets/map/terrain/mountain/mountain_02_d_snow_diffuse.png" id="82_4qjjf"]
+[ext_resource type="Texture2D" uid="uid://bil3uo305kfgr" path="res://assets/map/terrain/mountain/mountain_02_desert_c_diffuse.png" id="82_aemai"]
+[ext_resource type="Texture2D" uid="uid://c4fmrs5wakelt" path="res://assets/map/terrain/mountain/mountain_02_desert_c_mask.png" id="83_si133"]
+[ext_resource type="Texture2D" uid="uid://p5a0jqvirve2" path="res://assets/map/terrain/mountain/mountain_02_d_snow_mask.png" id="83_vqiaa"]
+[ext_resource type="Texture2D" uid="uid://c1cxxngtiqrgl" path="res://assets/map/terrain/mountain/mountain_02_desert_c_normal.png" id="84_gxo5v"]
+[ext_resource type="Texture2D" uid="uid://xuoes26txv8g" path="res://assets/map/terrain/mountain/mountain_02_d_snow_normal.png" id="84_hu6b1"]
+[ext_resource type="Texture2D" uid="uid://cp7xn0ewx4jne" path="res://assets/map/terrain/mountain/mountain_02_d_snow_properties.png" id="85_ot51d"]
+[ext_resource type="Texture2D" uid="uid://dgbotxpixalrg" path="res://assets/map/terrain/mountain/mountain_02_desert_c_properties.png" id="85_u5jhe"]
+[ext_resource type="Texture2D" uid="uid://osmgi638alqb" path="res://assets/map/terrain/mountain/mountain_02_desert_diffuse.png" id="86_fdls5"]
+[ext_resource type="Texture2D" uid="uid://cl2rudhf8wf3e" path="res://assets/map/terrain/mountain/mountain_02_d_valleys_diffuse.png" id="86_w7bbk"]
+[ext_resource type="Texture2D" uid="uid://dg2jcvgnv0oy3" path="res://assets/map/terrain/mountain/mountain_02_d_valleys_mask.png" id="87_0s32m"]
+[ext_resource type="Texture2D" uid="uid://fuvf5vwi2epe" path="res://assets/map/terrain/mountain/mountain_02_desert_mask.png" id="87_3o0wi"]
+[ext_resource type="Texture2D" uid="uid://dh1mmrdut6l8m" path="res://assets/map/terrain/mountain/mountain_02_desert_normal.png" id="88_scqmo"]
+[ext_resource type="Texture2D" uid="uid://cmnsl4dvf1l0w" path="res://assets/map/terrain/mountain/mountain_02_d_valleys_normal.png" id="88_vc3il"]
+[ext_resource type="Texture2D" uid="uid://drxc6y8w2kggh" path="res://assets/map/terrain/mountain/mountain_02_d_valleys_properties.png" id="89_agiyt"]
+[ext_resource type="Texture2D" uid="uid://chgpyg4nixyye" path="res://assets/map/terrain/mountain/mountain_02_desert_properties.png" id="89_lnhpn"]
+[ext_resource type="Texture2D" uid="uid://qvesg6vdj0es" path="res://assets/map/terrain/mountain/mountain_02_diffuse.png" id="90_hxyrm"]
+[ext_resource type="Texture2D" uid="uid://di4gcex6388wt" path="res://assets/map/terrain/mountain/mountain_02_mask.png" id="91_odvmt"]
+[ext_resource type="Texture2D" uid="uid://c7ohnrlirg3dd" path="res://assets/map/terrain/mountain/mountain_02_normal.png" id="92_1p7pa"]
+[ext_resource type="Texture2D" uid="uid://bq3rwkq8sodb6" path="res://assets/map/terrain/mountain/mountain_02_properties.png" id="93_q5pes"]
+[ext_resource type="Texture2D" uid="uid://0p6gr61gacp0" path="res://assets/map/terrain/mountain/mountain_02_snow_diffuse.png" id="94_njl4o"]
+[ext_resource type="Texture2D" uid="uid://d1ptgtw1mqcu4" path="res://assets/map/terrain/mountain/mountain_02_snow_mask.png" id="95_24a74"]
+[ext_resource type="Texture2D" uid="uid://j2qwncdhiqpa" path="res://assets/map/terrain/mountain/mountain_02_snow_normal.png" id="96_i5fmx"]
+[ext_resource type="Texture2D" uid="uid://bfirdyukvhscu" path="res://assets/map/terrain/mountain/mountain_02_snow_properties.png" id="97_pqgyg"]
+[ext_resource type="Texture2D" uid="uid://cpp2nfyd7m3rx" path="res://assets/map/terrain/india/india_farmlands_diffuse.png" id="126_eco44"]
+[ext_resource type="Texture2D" uid="uid://c00rbusqodps2" path="res://assets/map/terrain/medi/medi_dry_mud_diffuse.png" id="126_weean"]
+[ext_resource type="Texture2D" uid="uid://3oy61ty2qm5l" path="res://assets/map/terrain/medi/medi_dry_mud_mask.png" id="127_1xhu2"]
+[ext_resource type="Texture2D" uid="uid://c8h2x7mrkm0up" path="res://assets/map/terrain/medi/medi_dry_mud_normal.png" id="127_8stcp"]
+[ext_resource type="Texture2D" uid="uid://ddnl7xe5urnvh" path="res://assets/map/terrain/india/india_farmlands_mask.png" id="127_b2687"]
+[ext_resource type="Texture2D" uid="uid://dpi2rfgbfasmc" path="res://assets/map/terrain/india/india_farmlands_normal.png" id="127_okjt7"]
+[ext_resource type="Texture2D" uid="uid://bfyouoinuical" path="res://assets/map/terrain/medi/medi_dry_mud_properties.png" id="128_7hdjr"]
+[ext_resource type="Texture2D" uid="uid://dtr2oml6lo5qo" path="res://assets/map/terrain/india/india_farmlands_properties.png" id="128_b2687"]
+[ext_resource type="Texture2D" uid="uid://btk2t1sgqu0vl" path="res://assets/map/terrain/medi/medi_farmlands_diffuse.png" id="129_vhh8q"]
+[ext_resource type="Texture2D" uid="uid://db241n8o35mfa" path="res://assets/map/terrain/medi/medi_farmlands_mask.png" id="130_1xhu2"]
+[ext_resource type="Texture2D" uid="uid://dibbmt2kte658" path="res://assets/map/terrain/medi/medi_farmlands_normal.png" id="130_5yaqd"]
+[ext_resource type="Texture2D" uid="uid://b3ook7hqh6xek" path="res://assets/map/terrain/medi/medi_farmlands_properties.png" id="131_1xhu2"]
+[ext_resource type="Texture2D" uid="uid://citl7rpjmp8pd" path="res://assets/map/terrain/medi/medi_grass_01_diffuse.png" id="132_ssyp5"]
+[ext_resource type="Texture2D" uid="uid://cwwj22g0l0qxe" path="res://assets/map/terrain/medi/medi_grass_01_mask.png" id="133_8stcp"]
+[ext_resource type="Texture2D" uid="uid://bpfpoj4gmu4lp" path="res://assets/map/terrain/medi/medi_grass_01_normal.png" id="133_k8uyr"]
+[ext_resource type="Texture2D" uid="uid://d2dgmysotydsp" path="res://assets/map/terrain/medi/medi_grass_01_properties.png" id="134_2p6ci"]
+[ext_resource type="Texture2D" uid="uid://b202ba1hsusa6" path="res://assets/map/terrain/medi/medi_lumpy_grass_diffuse.png" id="135_brndy"]
+[ext_resource type="Texture2D" uid="uid://cerbvync262oj" path="res://assets/map/terrain/medi/medi_lumpy_grass_normal.png" id="136_agckh"]
+[ext_resource type="Texture2D" uid="uid://bdrbtpxenif53" path="res://assets/map/terrain/medi/medi_lumpy_grass_mask.png" id="137_vhh8q"]
+[ext_resource type="Texture2D" uid="uid://b4bv1iuor7aui" path="res://assets/map/terrain/medi/medi_lumpy_grass_properties.png" id="137_xdjfs"]
+[ext_resource type="Texture2D" uid="uid://bdkctw1qeoxdo" path="res://assets/map/terrain/medi/medi_noisy_grass_diffuse.png" id="138_2i538"]
+[ext_resource type="Texture2D" uid="uid://b6u6ud5ub1gkf" path="res://assets/map/terrain/medi/medi_noisy_grass_normal.png" id="139_tkdua"]
+[ext_resource type="Texture2D" uid="uid://dkv1j4mrgj3p1" path="res://assets/map/terrain/medi/medi_noisy_grass_mask.png" id="140_7hdjr"]
+[ext_resource type="Texture2D" uid="uid://dqc12xa6imadj" path="res://assets/map/terrain/medi/medi_noisy_grass_properties.png" id="140_64pkj"]
+[ext_resource type="Texture2D" uid="uid://ddw5gw4egsybo" path="res://assets/map/terrain/oasis/oasis_diffuse.png" id="167_tkdua"]
+[ext_resource type="Texture2D" uid="uid://b6eemhbgpwqps" path="res://assets/map/terrain/oasis/oasis_mask.png" id="168_64pkj"]
+[ext_resource type="Texture2D" uid="uid://l6bmfbcbsvxv" path="res://assets/map/terrain/oasis/oasis_normal.png" id="169_ctlv6"]
+[ext_resource type="Texture2D" uid="uid://8bfrut7g0nhw" path="res://assets/map/terrain/oasis/oasis_properties.png" id="170_e0s7x"]
+[ext_resource type="Texture2D" uid="uid://dp0pqd2y20574" path="res://assets/map/terrain/wetlands/wetlands_02_diffuse.png" id="180_uraeu"]
+[ext_resource type="Texture2D" uid="uid://cdop7xxhr2o8i" path="res://assets/map/terrain/wetlands/wetlands_02_mask.png" id="181_m3oya"]
+[ext_resource type="Texture2D" uid="uid://rridejco07nn" path="res://assets/map/terrain/wetlands/wetlands_02_mud_diffuse.png" id="182_qdtso"]
+[ext_resource type="Texture2D" uid="uid://b4xutgoxbxc0h" path="res://assets/map/terrain/wetlands/wetlands_02_mud_mask.png" id="183_mv5n1"]
+[ext_resource type="Texture2D" uid="uid://clqnwe1utosrv" path="res://assets/map/terrain/wetlands/wetlands_02_mud_normal.png" id="184_isdoh"]
+[ext_resource type="Texture2D" uid="uid://bbafah13f2yl2" path="res://assets/map/terrain/wetlands/wetlands_02_mud_properties.png" id="185_1bfs8"]
+[ext_resource type="Texture2D" uid="uid://bdq7il5depf3y" path="res://assets/map/terrain/wetlands/wetlands_02_normal.png" id="186_am43o"]
+[ext_resource type="Texture2D" uid="uid://btbmkku22lg36" path="res://assets/map/terrain/northern/northern_plains_01_diffuse.png" id="187_2p6ci"]
+[ext_resource type="Texture2D" uid="uid://dtbkikku2ahw8" path="res://assets/map/terrain/wetlands/wetlands_02_properties.png" id="187_u5jea"]
+[ext_resource type="Texture2D" uid="uid://5mvdpe717pul" path="res://assets/map/terrain/northern/northern_plains_01_mask.png" id="188_agckh"]
+[ext_resource type="Texture2D" uid="uid://c0giphmynqro3" path="res://assets/map/terrain/northern/northern_plains_01_normal.png" id="188_brndy"]
+[ext_resource type="Texture2D" uid="uid://ctp3c2pt86t3e" path="res://assets/map/terrain/northern/northern_plains_01_properties.png" id="189_agckh"]
+[ext_resource type="Texture2D" uid="uid://dnn0u3bgy18in" path="res://assets/map/terrain/mud_wet/mud_wet_01_diffuse.png" id="190_kbb2h"]
+[ext_resource type="Texture2D" uid="uid://e2gdu3omm4fd" path="res://assets/map/terrain/mud_wet/mud_wet_01_mask.png" id="191_850ob"]
+[ext_resource type="Texture2D" uid="uid://byb02xvq4ayfb" path="res://assets/map/terrain/mud_wet/mud_wet_01_normal.png" id="192_wcues"]
+[ext_resource type="Texture2D" uid="uid://l83ddi6fgu1e" path="res://assets/map/terrain/mud_wet/mud_wet_01_properties.png" id="193_gwpo8"]
+[ext_resource type="Texture2D" uid="uid://ckhqw5cfi4avp" path="res://assets/map/terrain/steppe/steppe_01_diffuse.png" id="199_eco44"]
+[ext_resource type="Texture2D" uid="uid://hpwws0vhdpw6" path="res://assets/map/terrain/steppe/steppe_01_mask.png" id="200_okjt7"]
+[ext_resource type="Texture2D" uid="uid://di6x8tplv2klm" path="res://assets/map/terrain/steppe/steppe_01_normal.png" id="201_b2687"]
+[ext_resource type="Texture2D" uid="uid://bq5yl6xhnkr6n" path="res://assets/map/terrain/steppe/steppe_01_properties.png" id="202_ay7ev"]
+[ext_resource type="Texture2D" uid="uid://ygmco1k388sb" path="res://assets/map/terrain/pattern.png" id="203_850ob"]
+[ext_resource type="Texture2D" uid="uid://cuktk1ac6l7qr" path="res://assets/map/terrain/steppe/steppe_bushes_01_diffuse.png" id="203_nwitu"]
+[ext_resource type="Texture2D" uid="uid://blmlea0jfwcra" path="res://assets/map/terrain/steppe/steppe_bushes_01_normal.png" id="204_kbb2h"]
+[ext_resource type="Texture2D" uid="uid://c0gvomalsb7om" path="res://assets/map/terrain/steppe/steppe_bushes_01_properties.png" id="205_850ob"]
+[ext_resource type="Texture2D" uid="uid://cvdqme1btr1g3" path="res://assets/map/terrain/steppe/steppe_bushes_diffuse.png" id="206_wcues"]
+[ext_resource type="Texture2D" uid="uid://wr2mx8ly1fl5" path="res://assets/map/terrain/steppe/steppe_bushes_mask.png" id="207_gwpo8"]
+[ext_resource type="Texture2D" uid="uid://b44fmnx58uhiq" path="res://assets/map/terrain/steppe/steppe_cracked_diffuse.png" id="208_fdsca"]
+[ext_resource type="Texture2D" uid="uid://c6htwl570f5g" path="res://assets/map/terrain/steppe/steppe_cracked_normal.png" id="209_keraw"]
+[ext_resource type="Texture2D" uid="uid://dde6s2n7dg175" path="res://assets/map/terrain/steppe/steppe_cracked_properties.png" id="210_bw14x"]
+[ext_resource type="Texture2D" uid="uid://dd0cgvglj2nu2" path="res://assets/map/terrain/steppe/steppe_rocks_diffuse.png" id="211_gpgyu"]
+[ext_resource type="Texture2D" uid="uid://b8x31wrvs1xpl" path="res://assets/map/terrain/steppe/steppe_rocks_mask.png" id="212_j77gw"]
+[ext_resource type="Texture2D" uid="uid://rlasge38bs8q" path="res://assets/map/terrain/steppe/steppe_rocks_normal.png" id="213_wsnja"]
+[ext_resource type="Texture2D" uid="uid://0ia82vh3ec16" path="res://assets/map/terrain/steppe/steppe_rocks_properties.png" id="214_hjcpr"]
+[ext_resource type="Texture2D" uid="uid://diudpv4lgehib" path="res://assets/map/terrain/snow/snow_diffuse.png" id="223_2i538"]
+[ext_resource type="Texture2D" uid="uid://m6vw541fasfh" path="res://assets/map/terrain/snow/snow_diffuse_for_combined_winter.png" id="224_64pkj"]
+[ext_resource type="Texture2D" uid="uid://c5l758o0am76e" path="res://assets/map/terrain/snow/snow_normal.png" id="224_tkdua"]
+[ext_resource type="Texture2D" uid="uid://diobtxdui4qbw" path="res://assets/map/terrain/snow/snow_properties.png" id="225_64pkj"]
+[ext_resource type="Texture2D" uid="uid://dxi6b7pg0hgs8" path="res://assets/map/terrain/snow/snow_mask.png" id="225_ctlv6"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_fv0dh")
-shader_parameter/terrain_diffuse = ExtResource("12_8ky2r")
-shader_parameter/terrain_normalmap = ExtResource("3_ulu2h")
-shader_parameter/province_map = ExtResource("2_yuk5a")
-shader_parameter/selected_province_color = Vector3(-1, -1, -1)
-shader_parameter/highlight_color = Color(1, 1, 0, 1)
 shader_parameter/water_color = ExtResource("13_ionn5")
 shader_parameter/ambient_normal = ExtResource("2_xoeih")
 shader_parameter/flow_map = ExtResource("4_m2d5o")
@@ -103,39 +305,9 @@ shader_parameter/foam_factor_near = 0.5
 shader_parameter/foam_factor_far = 1.0
 shader_parameter/noise_scale = 0.25
 shader_parameter/noise_speed = 2.0
-shader_parameter/river_mask = ExtResource("11_7j2xk")
-shader_parameter/river_bottom_diffuse = ExtResource("8_1dj06")
-shader_parameter/river_bottom_normal = ExtResource("10_nhnvl")
-shader_parameter/river_bottom_gloss = ExtResource("9_xr17l")
-shader_parameter/flatten_mult = 1.0
-shader_parameter/depth_fake_factor = 2.0
-shader_parameter/ocean_fade_rate = 0.8
-shader_parameter/river_depth = 0.15
+shader_parameter/terrain_diffuse = ExtResource("12_8ky2r")
+shader_parameter/terrain_normalmap = ExtResource("3_ulu2h")
 shader_parameter/river_elevation_adjust = 0.1
-shader_parameter/beach_mask = ExtResource("4_ourjj")
-shader_parameter/beach_water_depth = 0.2
-shader_parameter/beach_transition_width = 0.1
-shader_parameter/beach_wave_strength = 0.7
-shader_parameter/beach_mediterranean_mask = ExtResource("6_6dmp8")
-shader_parameter/beach_mediterranean_diffuse = ExtResource("5_1qwvf")
-shader_parameter/beach_mediterranean_normal = ExtResource("7_yppuy")
-shader_parameter/beach_mediterranean_properties = ExtResource("8_5xa3j")
-shader_parameter/beach_mediterranean_roughness = 0.75
-shader_parameter/beach_mediterranean_metallic = 0.0
-shader_parameter/beach_mediterranean_transition_width = 0.1
-shader_parameter/beach_mediterranean_normal_strength = 0.8
-shader_parameter/beach_mediterranean_water_depth = 0.18
-shader_parameter/beach_mediterranean_wave_strength = 1.1
-shader_parameter/beach_pebbles_mask = ExtResource("11_muxhi")
-shader_parameter/beach_pebbles_diffuse = ExtResource("10_tpaui")
-shader_parameter/beach_pebbles_normal = ExtResource("12_sha56")
-shader_parameter/beach_pebbles_properties = ExtResource("13_botlc")
-shader_parameter/beach_pebbles_roughness = 0.6
-shader_parameter/beach_pebbles_metallic = 0.05
-shader_parameter/beach_pebbles_transition_width = 0.15
-shader_parameter/beach_pebbles_normal_strength = 1.0
-shader_parameter/beach_pebbles_water_depth = 0.25
-shader_parameter/beach_pebbles_wave_strength = 0.9
 shader_parameter/border_width = 1.0
 shader_parameter/border_sharpness = 2.0
 shader_parameter/border_blend = 0.8
@@ -144,16 +316,26 @@ shader_parameter/border_glow_intensity = 0.0
 shader_parameter/border_animation_speed = 0.5
 shader_parameter/flat_map_mode = false
 shader_parameter/border_water = ExtResource("30_x64u8")
-shader_parameter/show_water_borders = true
+shader_parameter/show_water_borders = false
+shader_parameter/border_war = ExtResource("27_s6mca")
+shader_parameter/border_war_ally = ExtResource("28_rkdeu")
+shader_parameter/border_war_target = ExtResource("29_6pall")
+shader_parameter/border_civil_war = ExtResource("12_mexa3")
+shader_parameter/show_war_borders = false
+shader_parameter/is_at_war = false
+shader_parameter/is_war_target = false
+shader_parameter/is_civil_war = false
 shader_parameter/border_province = ExtResource("21_0euus")
 shader_parameter/border_highlighted_province = ExtResource("15_8dqox")
-shader_parameter/selection_highlight = ExtResource("45_rb4c8")
+shader_parameter/selection_highlight = ExtResource("45_mexa3")
 shader_parameter/selection_highlight_flat_map = ExtResource("46_cmdgn")
+shader_parameter/province_map = ExtResource("2_yuk5a")
 shader_parameter/show_province_borders = true
-shader_parameter/is_selected_province = false
 shader_parameter/is_hovered_province = false
+shader_parameter/selected_province_color = Vector3(-1, -1, -1)
+shader_parameter/highlight_color = Color(1, 1, 0, 1)
 shader_parameter/border_county = ExtResource("13_v8o3o")
-shader_parameter/show_county_borders = true
+shader_parameter/show_county_borders = false
 shader_parameter/border_domain = ExtResource("14_bon3p")
 shader_parameter/show_domain_borders = false
 shader_parameter/border_other_realm = ExtResource("20_34nyc")
@@ -166,16 +348,8 @@ shader_parameter/border_selected_realm_flat_map = ExtResource("25_osped")
 shader_parameter/border_realm_explorer_independent = ExtResource("22_lvep3")
 shader_parameter/border_realm_explorer_vassal = ExtResource("23_s6e4b")
 shader_parameter/my_top_realm = ExtResource("39_wi8oj")
-shader_parameter/show_realm_borders = true
+shader_parameter/show_realm_borders = false
 shader_parameter/is_my_realm = false
-shader_parameter/border_war = ExtResource("27_s6mca")
-shader_parameter/border_war_ally = ExtResource("28_rkdeu")
-shader_parameter/border_war_target = ExtResource("29_6pall")
-shader_parameter/border_civil_war = ExtResource("12_mexa3")
-shader_parameter/show_war_borders = true
-shader_parameter/is_at_war = false
-shader_parameter/is_war_target = false
-shader_parameter/is_civil_war = false
 shader_parameter/border_impassable = ExtResource("18_odrbf")
 shader_parameter/epidemic = ExtResource("32_eyrhb")
 shader_parameter/struggle = ExtResource("47_rhtbj")
@@ -184,3 +358,350 @@ shader_parameter/struggle_interloper = ExtResource("48_tdfd1")
 shader_parameter/struggle_uninvolved = ExtResource("50_n5i3u")
 shader_parameter/debug = ExtResource("31_lndps")
 shader_parameter/is_in_struggle = false
+shader_parameter/pattern_texture = ExtResource("203_850ob")
+shader_parameter/pattern_strength = 0.4
+shader_parameter/pattern_scale = 0.5
+shader_parameter/terrain_base_diffuse0 = ExtResource("63_x64u8")
+shader_parameter/terrain_base_normal0 = ExtResource("67_rb4c8")
+shader_parameter/terrain_base_material0 = ExtResource("65_eyrhb")
+shader_parameter/terrain_base_diffuse1 = ExtResource("64_lndps")
+shader_parameter/terrain_base_normal1 = ExtResource("68_cmdgn")
+shader_parameter/terrain_base_material1 = ExtResource("66_wi8oj")
+shader_parameter/terrain_base_tiling = 20.0
+shader_parameter/terrain_base_slope_factor = 0.7
+shader_parameter/terrain_base_height_factor = 0.3
+shader_parameter/plains_diffuse = ExtResource("53_f7n60")
+shader_parameter/plains_normal = ExtResource("67_j6p8y")
+shader_parameter/plains_properties_base = ExtResource("68_can6n")
+shader_parameter/plains_mask = ExtResource("62_m70d7")
+shader_parameter/plains_tiling = 20.0
+shader_parameter/plains_density = 1.0
+shader_parameter/plains_pattern_influence = 0.4
+shader_parameter/plains_dry_diffuse = ExtResource("52_diibe")
+shader_parameter/plains_dry_normal = ExtResource("58_f7n60")
+shader_parameter/plains_dry_properties = ExtResource("59_m70d7")
+shader_parameter/plains_dry_mask = ExtResource("53_16u8h")
+shader_parameter/plains_dry_tiling = 30.0
+shader_parameter/plains_dry_density = 0.5
+shader_parameter/plains_dry_mud_diffuse = ExtResource("54_40g2f")
+shader_parameter/plains_dry_mud_normal = ExtResource("56_3s58i")
+shader_parameter/plains_dry_mud_properties = ExtResource("57_7w65l")
+shader_parameter/plains_dry_mud_mask = ExtResource("55_41obg")
+shader_parameter/plains_dry_mud_tiling = 8.0
+shader_parameter/plains_dry_mud_density = 1.0
+shader_parameter/plains_dry_mud_crack_intensity = 0.5
+shader_parameter/plains_rough_diffuse = ExtResource("64_6xr5q")
+shader_parameter/plains_rough_normal = ExtResource("66_u5gwh")
+shader_parameter/plains_rough_properties = ExtResource("67_urdkw")
+shader_parameter/plains_rough_mask = ExtResource("65_g6d1x")
+shader_parameter/plains_rough_tiling = 11.0
+shader_parameter/plains_rough_density = 1.0
+shader_parameter/plains_noisy_diffuse = ExtResource("60_j6p8y")
+shader_parameter/plains_noisy_normal = ExtResource("62_txsxw")
+shader_parameter/plains_noisy_properties = ExtResource("63_d2xml")
+shader_parameter/plains_noisy_mask = ExtResource("61_can6n")
+shader_parameter/plains_noisy_tiling = 12.0
+shader_parameter/plains_noisy_density = 1.0
+shader_parameter/farmland_diffuse = ExtResource("40_j6p8y")
+shader_parameter/farmland_normal = ExtResource("42_txsxw")
+shader_parameter/farmland_properties = ExtResource("43_d2xml")
+shader_parameter/farmland_mask = ExtResource("41_can6n")
+shader_parameter/farmland_tiling = 20.0
+shader_parameter/farmland_density = 1.0
+shader_parameter/mud_wet_01_diffuse = ExtResource("190_kbb2h")
+shader_parameter/mud_wet_01_normal = ExtResource("192_wcues")
+shader_parameter/mud_wet_01_properties = ExtResource("193_gwpo8")
+shader_parameter/mud_wet_01_mask = ExtResource("191_850ob")
+shader_parameter/mud_wet_tiling = 28.0
+shader_parameter/mud_wet_density = 1.0
+shader_parameter/hills_base_diffuse = ExtResource("66_hxyrm")
+shader_parameter/hills_base_normal = ExtResource("68_1p7pa")
+shader_parameter/hills_base_properties = ExtResource("69_q5pes")
+shader_parameter/hills_base_mask = ExtResource("67_odvmt")
+shader_parameter/hills_base_tiling = 25.0
+shader_parameter/hills_base_density = 1.0
+shader_parameter/hills_rocks_diffuse = ExtResource("70_njl4o")
+shader_parameter/hills_rocks_normal = ExtResource("76_a83ds")
+shader_parameter/hills_rocks_properties = ExtResource("77_qrj7s")
+shader_parameter/hills_rocks_mask = ExtResource("71_24a74")
+shader_parameter/hills_rocks_tiling = 30.0
+shader_parameter/hills_rocks_density = 1.0
+shader_parameter/hills_rocks_medi_diffuse = ExtResource("72_i5fmx")
+shader_parameter/hills_rocks_medi_normal = ExtResource("74_3q4e6")
+shader_parameter/hills_rocks_medi_properties = ExtResource("75_xoi4g")
+shader_parameter/hills_rocks_medi_mask = ExtResource("73_pqgyg")
+shader_parameter/hills_rocks_medi_tiling = 32.0
+shader_parameter/hills_rocks_medi_density = 1.0
+shader_parameter/hills_rocks_small_diffuse = ExtResource("78_kc5jx")
+shader_parameter/hills_rocks_small_normal = ExtResource("80_teajr")
+shader_parameter/hills_rocks_small_properties = ExtResource("81_o2pgf")
+shader_parameter/hills_rocks_small_mask = ExtResource("79_permo")
+shader_parameter/hills_rocks_small_tiling = 35.0
+shader_parameter/hills_rocks_small_density = 1.0
+shader_parameter/floodplains_01_diffuse = ExtResource("56_vqa12")
+shader_parameter/floodplains_01_normal = ExtResource("58_m4u23")
+shader_parameter/floodplains_01_properties = ExtResource("59_ptqo7")
+shader_parameter/floodplains_01_mask = ExtResource("57_8c14o")
+shader_parameter/floodplains_tiling = 25.0
+shader_parameter/floodplains_density = 1.0
+shader_parameter/wetlands_mask = ExtResource("181_m3oya")
+shader_parameter/wetlands_diffuse = ExtResource("180_uraeu")
+shader_parameter/wetlands_normal = ExtResource("186_am43o")
+shader_parameter/wetlands_properties = ExtResource("187_u5jea")
+shader_parameter/wetlands_mud_mask = ExtResource("183_mv5n1")
+shader_parameter/wetlands_mud_diffuse = ExtResource("182_qdtso")
+shader_parameter/wetlands_mud_normal = ExtResource("184_isdoh")
+shader_parameter/wetlands_mud_properties = ExtResource("185_1bfs8")
+shader_parameter/coastline_cliff_grey_diffuse = ExtResource("34_urdkw")
+shader_parameter/coastline_cliff_grey_normal = ExtResource("36_uw2si")
+shader_parameter/coastline_cliff_grey_properties = ExtResource("37_44dlr")
+shader_parameter/coastline_cliff_grey_mask = ExtResource("35_v28nx")
+shader_parameter/coastline_cliff_grey_tiling = 15.0
+shader_parameter/coastline_cliff_grey_density = 1.0
+shader_parameter/coastline_cliff_desert_diffuse = ExtResource("32_g6d1x")
+shader_parameter/coastline_cliff_desert_mask = ExtResource("33_u5gwh")
+shader_parameter/coastline_cliff_desert_tiling = 15.0
+shader_parameter/coastline_cliff_desert_density = 1.0
+shader_parameter/mountain_diffuse = ExtResource("90_hxyrm")
+shader_parameter/mountain_normal = ExtResource("92_1p7pa")
+shader_parameter/mountain_properties = ExtResource("93_q5pes")
+shader_parameter/mountain_mask = ExtResource("91_odvmt")
+shader_parameter/mountain_tiling = 40.0
+shader_parameter/mountain_density = 1.0
+shader_parameter/mountain_b_diffuse = ExtResource("66_akkbo")
+shader_parameter/mountain_b_normal = ExtResource("68_j0mjc")
+shader_parameter/mountain_b_properties = ExtResource("69_hmqxd")
+shader_parameter/mountain_b_mask = ExtResource("67_b1w3a")
+shader_parameter/mountain_b_tiling = 40.0
+shader_parameter/mountain_b_density = 1.0
+shader_parameter/mountain_d_diffuse = ExtResource("78_w7bbk")
+shader_parameter/mountain_d_normal = ExtResource("80_vc3il")
+shader_parameter/mountain_d_properties = ExtResource("81_agiyt")
+shader_parameter/mountain_d_mask = ExtResource("79_0s32m")
+shader_parameter/mountain_d_tiling = 45.0
+shader_parameter/mountain_d_density = 1.0
+shader_parameter/mountain_d_valleys_diffuse = ExtResource("86_w7bbk")
+shader_parameter/mountain_d_valleys_normal = ExtResource("88_vc3il")
+shader_parameter/mountain_d_valleys_properties = ExtResource("89_agiyt")
+shader_parameter/mountain_d_valleys_mask = ExtResource("87_0s32m")
+shader_parameter/mountain_d_valleys_tiling = 40.0
+shader_parameter/mountain_d_valleys_density = 1.0
+shader_parameter/mountain_d_snow_diffuse = ExtResource("82_4qjjf")
+shader_parameter/mountain_d_snow_normal = ExtResource("84_hu6b1")
+shader_parameter/mountain_d_snow_properties = ExtResource("85_ot51d")
+shader_parameter/mountain_d_snow_mask = ExtResource("83_vqiaa")
+shader_parameter/mountain_d_snow_tiling = 45.0
+shader_parameter/mountain_d_snow_density = 1.0
+shader_parameter/mountain_snow_diffuse = ExtResource("94_njl4o")
+shader_parameter/mountain_snow_normal = ExtResource("96_i5fmx")
+shader_parameter/mountain_snow_properties = ExtResource("97_pqgyg")
+shader_parameter/mountain_snow_mask = ExtResource("95_24a74")
+shader_parameter/mountain_snow_tiling = 35.0
+shader_parameter/mountain_snow_density = 1.0
+shader_parameter/mountain_c_diffuse = ExtResource("70_p2b5m")
+shader_parameter/mountain_c_normal = ExtResource("72_jsrqb")
+shader_parameter/mountain_c_properties = ExtResource("73_w8y1w")
+shader_parameter/mountain_c_mask = ExtResource("71_tjmh2")
+shader_parameter/mountain_c_tiling = 35.0
+shader_parameter/mountain_c_density = 1.0
+shader_parameter/mountain_c_snow_diffuse = ExtResource("74_4qjjf")
+shader_parameter/mountain_c_snow_normal = ExtResource("76_hu6b1")
+shader_parameter/mountain_c_snow_properties = ExtResource("77_ot51d")
+shader_parameter/mountain_c_snow_mask = ExtResource("75_vqiaa")
+shader_parameter/mountain_c_snow_tiling = 35.0
+shader_parameter/mountain_c_snow_density = 1.0
+shader_parameter/forest_leaf_diffuse = ExtResource("66_vqa12")
+shader_parameter/forest_leaf_normal = ExtResource("68_m4u23")
+shader_parameter/forest_leaf_properties = ExtResource("69_ptqo7")
+shader_parameter/forest_leaf_mask = ExtResource("67_8c14o")
+shader_parameter/forest_leaf_tiling = 28.0
+shader_parameter/forest_leaf_density = 1.0
+shader_parameter/forest_jungle_diffuse = ExtResource("62_kc5jx")
+shader_parameter/forest_jungle_normal = ExtResource("64_teajr")
+shader_parameter/forest_jungle_properties = ExtResource("65_o2pgf")
+shader_parameter/forest_jungle_mask = ExtResource("63_permo")
+shader_parameter/forest_jungle_tiling = 25.0
+shader_parameter/forest_jungle_density = 1.0
+shader_parameter/forest_pine_diffuse = ExtResource("70_k120o")
+shader_parameter/forest_pine_normal = ExtResource("72_j36qv")
+shader_parameter/forest_pine_properties = ExtResource("73_a8j2i")
+shader_parameter/forest_pine_mask = ExtResource("71_q2y43")
+shader_parameter/forest_pine_tiling = 30.0
+shader_parameter/forest_pine_density = 1.0
+shader_parameter/forestfloor_diffuse = ExtResource("74_uraeu")
+shader_parameter/forestfloor_normal = ExtResource("76_qdtso")
+shader_parameter/forestfloor_properties = ExtResource("77_mv5n1")
+shader_parameter/forestfloor_mask = ExtResource("75_m3oya")
+shader_parameter/forestfloor_tiling = 25.0
+shader_parameter/forestfloor_density = 1.0
+shader_parameter/desert_01_diffuse = ExtResource("39_bgb1h")
+shader_parameter/desert_01_normal = ExtResource("41_1ivrw")
+shader_parameter/desert_01_properties = ExtResource("42_6ftht")
+shader_parameter/desert_01_mask = ExtResource("40_gapbp")
+shader_parameter/desert_base_tiling = 25.0
+shader_parameter/desert_base_density = 1.0
+shader_parameter/desert_02_diffuse = ExtResource("43_qdlfu")
+shader_parameter/desert_02_normal = ExtResource("45_t6vql")
+shader_parameter/desert_02_properties = ExtResource("46_pafk6")
+shader_parameter/desert_02_mask = ExtResource("44_2i5el")
+shader_parameter/desert_02_tiling = 25.0
+shader_parameter/desert_02_density = 1.0
+shader_parameter/desert_cracked_diffuse = ExtResource("47_ux0q2")
+shader_parameter/desert_cracked_normal = ExtResource("49_r5kx7")
+shader_parameter/desert_cracked_properties = ExtResource("50_glu70")
+shader_parameter/desert_cracked_mask = ExtResource("48_5ey6e")
+shader_parameter/desert_cracked_tiling = 32.0
+shader_parameter/desert_cracked_density = 1.0
+shader_parameter/desert_wavy_01_diffuse = ExtResource("59_1xhu2")
+shader_parameter/desert_wavy_01_normal = ExtResource("65_xdjfs")
+shader_parameter/desert_wavy_01_properties = ExtResource("66_2i538")
+shader_parameter/desert_wavy_01_mask = ExtResource("64_agckh")
+shader_parameter/desert_wavy_tiling = 28.0
+shader_parameter/desert_wavy_density = 1.0
+shader_parameter/desert_wavy_01_larger_diffuse = ExtResource("60_ssyp5")
+shader_parameter/desert_wavy_01_larger_normal = ExtResource("62_2p6ci")
+shader_parameter/desert_wavy_01_larger_properties = ExtResource("63_brndy")
+shader_parameter/desert_wavy_01_larger_mask = ExtResource("61_k8uyr")
+shader_parameter/desert_wavy_larger_tiling = 20.0
+shader_parameter/desert_wavy_larger_density = 1.0
+shader_parameter/desert_flat_01_diffuse = ExtResource("51_16nmo")
+shader_parameter/desert_flat_01_normal = ExtResource("53_erje0")
+shader_parameter/desert_flat_01_properties = ExtResource("54_weean")
+shader_parameter/desert_flat_01_mask = ExtResource("52_yhvfp")
+shader_parameter/desert_flat_tiling = 25.0
+shader_parameter/desert_flat_density = 1.0
+shader_parameter/desert_rocky_diffuse = ExtResource("55_8stcp")
+shader_parameter/desert_rocky_normal = ExtResource("57_vhh8q")
+shader_parameter/desert_rocky_properties = ExtResource("58_5yaqd")
+shader_parameter/desert_rocky_mask = ExtResource("56_7hdjr")
+shader_parameter/desert_rocky_tiling = 30.0
+shader_parameter/desert_rocky_density = 1.0
+shader_parameter/mountain_desert_diffuse = ExtResource("86_fdls5")
+shader_parameter/mountain_desert_normal = ExtResource("88_scqmo")
+shader_parameter/mountain_desert_properties = ExtResource("89_lnhpn")
+shader_parameter/mountain_desert_mask = ExtResource("87_3o0wi")
+shader_parameter/mountain_desert_tiling = 45.0
+shader_parameter/mountain_desert_density = 1.0
+shader_parameter/mountain_desert_c_diffuse = ExtResource("82_aemai")
+shader_parameter/mountain_desert_c_normal = ExtResource("84_gxo5v")
+shader_parameter/mountain_desert_c_properties = ExtResource("85_u5jhe")
+shader_parameter/mountain_desert_c_mask = ExtResource("83_si133")
+shader_parameter/mountain_desert_c_tiling = 45.0
+shader_parameter/mountain_desert_c_density = 1.0
+shader_parameter/drylands_diffuse = ExtResource("43_286sv")
+shader_parameter/drylands_normal = ExtResource("49_mnquw")
+shader_parameter/drylands_properties = ExtResource("50_f4g8f")
+shader_parameter/drylands_mask = ExtResource("48_s1bi4")
+shader_parameter/drylands_tiling = 30.0
+shader_parameter/drylands_density = 1.0
+shader_parameter/drylands_grassy_diffuse = ExtResource("44_anc8d")
+shader_parameter/drylands_grassy_normal = ExtResource("46_t4y2j")
+shader_parameter/drylands_grassy_properties = ExtResource("47_x8spr")
+shader_parameter/drylands_grassy_mask = ExtResource("45_ls22c")
+shader_parameter/drylands_grassy_tiling = 20.0
+shader_parameter/drylands_grassy_density = 1.0
+shader_parameter/drylands_cracked_diffuse = ExtResource("39_qmqik")
+shader_parameter/drylands_cracked_normal = ExtResource("41_ju8ms")
+shader_parameter/drylands_cracked_properties = ExtResource("42_dl7sr")
+shader_parameter/drylands_cracked_mask = ExtResource("40_76qmd")
+shader_parameter/drylands_cracked_tiling = 25.0
+shader_parameter/drylands_cracked_density = 1.0
+shader_parameter/oasis_diffuse = ExtResource("167_tkdua")
+shader_parameter/oasis_normal = ExtResource("169_ctlv6")
+shader_parameter/oasis_properties = ExtResource("170_e0s7x")
+shader_parameter/oasis_mask = ExtResource("168_64pkj")
+shader_parameter/oasis_tiling = 20.0
+shader_parameter/oasis_density = 1.0
+shader_parameter/medi_dry_mud_diffuse = ExtResource("126_weean")
+shader_parameter/medi_dry_mud_normal = ExtResource("127_8stcp")
+shader_parameter/medi_dry_mud_properties = ExtResource("128_7hdjr")
+shader_parameter/medi_dry_mud_mask = ExtResource("127_1xhu2")
+shader_parameter/medi_dry_mud_tiling = 32.0
+shader_parameter/medi_dry_mud_density = 1.0
+shader_parameter/medi_grass_01_diffuse = ExtResource("132_ssyp5")
+shader_parameter/medi_grass_01_normal = ExtResource("133_k8uyr")
+shader_parameter/medi_grass_01_properties = ExtResource("134_2p6ci")
+shader_parameter/medi_grass_01_mask = ExtResource("133_8stcp")
+shader_parameter/medi_grass_tiling = 25.0
+shader_parameter/medi_grass_density = 1.0
+shader_parameter/medi_lumpy_grass_diffuse = ExtResource("135_brndy")
+shader_parameter/medi_lumpy_grass_normal = ExtResource("136_agckh")
+shader_parameter/medi_lumpy_grass_properties = ExtResource("137_xdjfs")
+shader_parameter/medi_lumpy_grass_mask = ExtResource("137_vhh8q")
+shader_parameter/medi_lumpy_grass_tiling = 30.0
+shader_parameter/medi_lumpy_grass_density = 1.0
+shader_parameter/medi_noisy_grass_diffuse = ExtResource("138_2i538")
+shader_parameter/medi_noisy_grass_normal = ExtResource("139_tkdua")
+shader_parameter/medi_noisy_grass_properties = ExtResource("140_64pkj")
+shader_parameter/medi_noisy_grass_mask = ExtResource("140_7hdjr")
+shader_parameter/medi_noisy_grass_tiling = 28.0
+shader_parameter/medi_noisy_grass_density = 1.0
+shader_parameter/medi_farmlands_diffuse = ExtResource("129_vhh8q")
+shader_parameter/medi_farmlands_normal = ExtResource("130_5yaqd")
+shader_parameter/medi_farmlands_properties = ExtResource("131_1xhu2")
+shader_parameter/medi_farmlands_mask = ExtResource("130_1xhu2")
+shader_parameter/medi_farmlands_tiling = 25.0
+shader_parameter/medi_farmlands_density = 1.0
+shader_parameter/northern_plains_01_diffuse = ExtResource("187_2p6ci")
+shader_parameter/northern_plains_01_normal = ExtResource("188_brndy")
+shader_parameter/northern_plains_01_properties = ExtResource("189_agckh")
+shader_parameter/northern_plains_01_mask = ExtResource("188_agckh")
+shader_parameter/northern_plains_tiling = 25.0
+shader_parameter/northern_plains_density = 1.0
+shader_parameter/steppe_01_diffuse = ExtResource("199_eco44")
+shader_parameter/steppe_01_normal = ExtResource("201_b2687")
+shader_parameter/steppe_01_properties = ExtResource("202_ay7ev")
+shader_parameter/steppe_01_mask = ExtResource("200_okjt7")
+shader_parameter/steppe_base_tiling = 25.0
+shader_parameter/steppe_base_density = 1.0
+shader_parameter/steppe_rocks_diffuse = ExtResource("211_gpgyu")
+shader_parameter/steppe_rocks_normal = ExtResource("213_wsnja")
+shader_parameter/steppe_rocks_properties = ExtResource("214_hjcpr")
+shader_parameter/steppe_rocks_mask = ExtResource("212_j77gw")
+shader_parameter/steppe_rocks_tiling = 30.0
+shader_parameter/steppe_rocks_density = 1.0
+shader_parameter/steppe_bushes_diffuse = ExtResource("206_wcues")
+shader_parameter/steppe_bushes_normal = ExtResource("204_kbb2h")
+shader_parameter/steppe_bushes_properties = ExtResource("205_850ob")
+shader_parameter/steppe_bushes_mask = ExtResource("207_gwpo8")
+shader_parameter/steppe_bushes_tiling = 27.0
+shader_parameter/steppe_bushes_density = 1.0
+shader_parameter/snow_diffuse = ExtResource("223_2i538")
+shader_parameter/snow_normal = ExtResource("224_tkdua")
+shader_parameter/snow_properties = ExtResource("225_64pkj")
+shader_parameter/snow_mask = ExtResource("225_ctlv6")
+shader_parameter/snow_tiling = 30.0
+shader_parameter/snow_density = 1.0
+shader_parameter/india_farmlands_diffuse = ExtResource("126_eco44")
+shader_parameter/india_farmlands_normal = ExtResource("127_okjt7")
+shader_parameter/india_farmlands_properties = ExtResource("128_b2687")
+shader_parameter/india_farmlands_mask = ExtResource("127_b2687")
+shader_parameter/india_farmlands_tiling = 25.0
+shader_parameter/india_farmlands_density = 1.0
+shader_parameter/plains_desat_mask = ExtResource("52_7w65l")
+shader_parameter/plains_desat_tiling = 20.0
+shader_parameter/plains_desat_density = 1.0
+shader_parameter/coastline_cliff_brown_mask = ExtResource("31_6xr5q")
+shader_parameter/coastline_cliff_brown_tiling = 15.0
+shader_parameter/coastline_cliff_brown_density = 1.0
+shader_parameter/coastline_cliff_brown_color = Vector3(0.45, 0.32, 0.2)
+shader_parameter/drylands_grass_clean_density = 1.0
+shader_parameter/drylands_grass_clean_color = Vector3(0.7, 0.75, 0.4)
+shader_parameter/northern_hills_01_mask = ExtResource("188_agckh")
+shader_parameter/northern_hills_tiling = 30.0
+shader_parameter/northern_hills_density = 1.0
+shader_parameter/steppe_bushes_01_diffuse = ExtResource("203_nwitu")
+shader_parameter/steppe_bushes_01_normal = ExtResource("204_kbb2h")
+shader_parameter/steppe_bushes_01_properties = ExtResource("205_850ob")
+shader_parameter/steppe_bushes_01_tiling = 29.0
+shader_parameter/steppe_bushes_01_density = 1.0
+shader_parameter/steppe_cracked_diffuse = ExtResource("208_fdsca")
+shader_parameter/steppe_cracked_normal = ExtResource("209_keraw")
+shader_parameter/steppe_cracked_properties = ExtResource("210_bw14x")
+shader_parameter/steppe_cracked_tiling = 32.0
+shader_parameter/steppe_cracked_density = 1.0
+shader_parameter/steppe_cracked_threshold = 0.7
+shader_parameter/snow_diffuse_for_combined_winter = ExtResource("224_64pkj")
+shader_parameter/winter_mode = false
+shader_parameter/snow_winter_tiling = 20.0
+shader_parameter/snow_winter_strength = 0.8
